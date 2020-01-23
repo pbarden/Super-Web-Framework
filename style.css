@@ -881,7 +881,7 @@ img[draggable="true"] {
 .speech-bubble {
     position: fixed;
     bottom: 30%;
-    right: 15%;
+    right: 5%;
     z-index: 12;
     visibility: hidden;
     height: 180px;
