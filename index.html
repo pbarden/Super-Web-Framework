@@ -1,0 +1,1157 @@
+<!DOCTYPE html>
+<!-- week_1.html -->
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Paul's final project</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:title" content="Paul's final project">
+    <meta property="og:description" content="Final project for my last class. Last updated 1/18.">
+    <meta property="og:image" content="screen.PNG">
+    <meta property="og:url" content="https://bsitcapstone.herokuapp.com/week_1.html">
+  </head>
+  <body>
+    <header>
+      <!-- Navigation -->
+      <nav>
+        <ul>
+          <li><img class="logo icon" src="icons/starfish.png" alt="sample logo"></li>
+          <li>Paul's Final Project</li>
+          <li><a href="https://bsitcapstone.herokuapp.com/">Home</a></li>
+          <li><a href="http://www.pbarden.io/#About">About</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!-- Main -->
+    <main>
+      <!-- About + Contents -->
+      <section>
+        <h1>Week 2: Adding HTML5 Video and other media</h1>
+        <p>This is my week 2 assignment update. In case you need to get back, <a target="_blank" href="index.html">you can just drag this link into your bookmarks</a>. The sections below include examples of various elements. Most of the front-end framework has style and samples included with a bit of special attention to responsive design. Very heavily inspired by nostalgia.</p>
+        <br>
+        <h3>Contents:</h3>
+        <details>
+          <summary>Week 1</summary>
+          <ul class="toc">
+            <li><a href="#headings">Headings</a></li>
+            <li><a href="#text-colors">Text colors</a></li>
+            <li><a href="#blockquotes">Blockquotes</a></li>
+            <li><a href="#code-snippets">Code snippets</a></li>
+            <li><a href="#input-forms">Input forms</a></li>
+            <li><a href="#selects">Selects</a></li>
+            <li><a href="#lists">Lists</a></li>
+            <li><a href="#tables">Tables</a></li>
+            <li><a href="#icons">Icons</a></li>
+            <li><a href="#details">Details</a></li>
+            <li><a href="#two-col-content">2-column content</a></li>
+            <li><a href="#three-col-content">3-column content</a></li>
+            <li><a href="#callouts">Callouts</a></li>
+            <li><a href="#card-examples">Card examples</a></li>
+          </ul>
+        </details>
+        <details open>
+          <summary>Week 2</summary>
+          <ul class="toc">
+            <li><a href="#audio-videos">Audio/Video</a></li>
+            <li><a href="#lazy-loading">Lazy loading</a></li>
+            <li><a href="#pop-up-modals">Pop-up modals</a></li>
+            <li><a href="#drag-drops">Drag/Drop</a></li>
+            <li>Quackers (you'll see)</li>
+          </ul>
+        </details>
+        <br>
+        <h3>Notes:</h3>
+        <p>All HTML, CSS and Javascript content is original and was developed by me. All other content is used in accordance with license terms and credit is provided where these might appear thoughout this document.</p><br>
+        <p>The page is divided into sections, which serve as the main individual components within the body tag.</p><br>
+        <h4>External resources used:</h4>
+        <ul>
+          <li>Press Start 2P - Google Fonts (2020). Released under <a target="_blank" href="http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL_web">Open Font license</a>. Reference added from url: <a target="_blank" href="https://fonts.google.com/specimen/Press+Start+2P">https://fonts.google.com/specimen/Press+Start+2P</a></li>
+          <li>Sogomn (2016). Released under <a target="_blank" href="https://creativecommons.org/publicdomain/zero/1.0/">CC0 (Public domain) license</a>. Downloaded from <a target="_blank" href="https://opengameart.org/content/pixel-icons-0">https://opengameart.org/content/pixel-icons-0</a></li>
+          <li>omfgdude (2017). Released under <a target="_blank" href="https://creativecommons.org/publicdomain/zero/1.0/">CC0 (Public domain) license</a>. Samurai Champloo Insipired Loop | OpenGameArt.org. Downloaded from https://opengameart.org/content/samurai-champloo-insipired-loop</li>
+          <li>Universal Studios. (1945). Secret Agent x-9: Chapter 1 - Torpedo Rendezvous : Morgan Cox : Free Download, Borrow, and Streaming : Internet Archive. Acceptable usage under <a href="https://creativecommons.org/licenses/by/3.0/">CC-BY 3.0 - Attribution</a>. Reference added from <a href="https://archive.org/details/secret_agent_x_9_ep1">https://archive.org/details/secret_agent_x_9_ep1</a></li>
+          <li>kotnaszynce. (2019). cute duck animated set | OpenGameArt.org. Released under <a target="_blank" href="https://creativecommons.org/publicdomain/zero/1.0/">CC0 (Public domain) license</a>. Downloaded from <a href="https://opengameart.org/content/cute-duck-animated-set">https://opengameart.org/content/cute-duck-animated-set</a></li>
+        </ul>
+        <!-- Last updated: 1/22/2020 -->
+        <h4>Changelog:</h4>
+        <h5>Week 1:</h5>
+        <ul>
+          <li>Created HTML Document</li>
+          <li>Created CSS Framework</li>
+          <li>Created documentation for main components</li>
+          <li>Created templates for text sections</li>
+          <li>Created templates for image sections</li>
+          <li>Deployed live using Git/Heroku</li>
+        </ul>
+        <h5>Week 2:</h5>
+        <ul>
+          <li>Updated styles for better responsive design</li>
+          <li>Added support for lazy loaded images</li>
+          <li>Created video/audio sections (Media API)</li>
+          <li>Added modals in multiple sizes</li>
+          <li>Created drag/drop elements (Drag and Drop API)</li>
+          <li>Updated documentation for additional components</li>
+        </ul>
+        <br>
+      </section>
+      <!-- Headings -->
+      <section id="headings">
+        <h2>Headings:</h2>
+        <h3>Heading 3</h3>
+        <h4>Heading 4</h4>
+        <h5>Heading 5</h5>
+        <h6>Heading 6</h6>
+        <p>**Please note that &lt;h1&gt; has been omitted from this list since it is included in the section above and will otherwise cause the page to fail validation.</p>
+        <p>Heading 2 (located at the top of the card) is intended to be the top-level heading for each section and styles have been adjusted accordingly.</p>
+        <details class="code-sample">
+          <summary>Show me a code sample:</summary>
+          <div class="codewrap">
+            <code>
+              &lt;h2&gt;Heading 2&lt;/h2&gt;<br>
+              &lt;h3&gt;Heading 3&lt;/h3&gt;<br>
+              &lt;h4&gt;Heading 4&lt;/h4&gt;<br>
+              &lt;h5&gt;Heading 5&lt;/h5&gt;<br>
+              &lt;h6&gt;Heading 6&lt;/h6&gt;
+            </code>
+          </div>
+        </details>
+      </section>
+      <!-- Text colors -->
+      <section id="text-colors">
+        <h2>Text colors:</h2>
+        <p>There are several options for text colors, often used to emphasize errors, warnings, or other types of messages to grab the attention of the user. In order to not rip off naming conventions used in popular frameworks these have unique names.</p>
+        <p>In general, the class names should be set to emphasize meaning, such as 'error', 'inactive' or 'warning'. Since this is for a class project, I decided to use design 'flavors' instead.</p>
+        <p><br>
+          <span class="tomato">"Tomato" (Red text)</span><br>
+          <span class="leaf">"Leaf" (Green text)</span><br>
+          <span class="wheat">"Wheat" (Yellow text)</span><br>
+          <span class="berry">"Berry" (Blue text)</span><br>
+          <span class="stone">"Stone" (Gray text)</span>
+        </p>
+        <details class="code-sample">
+          <summary>Show me a code sample:</summary>
+          <div class="codewrap">
+            <code>
+              &lt;span class="tomato"&gt;Tomato text&lt;/span&gt;<br>
+              &lt;span class="leaf"&gt;Leaf text&lt;/span&gt;<br>
+              &lt;span class="wheat"&gt;Wheat text&lt;/span&gt;<br>
+              &lt;span class="berry"&gt;Berry text&lt;/span&gt;<br>
+              &lt;span class="stone"&gt;Stone text&lt;/span&gt;<br>
+            </code>
+          </div>
+        </details>
+      </section>
+      <!-- Blockquotes -->
+      <section id="blockquotes">
+        <h2>Blockquote:</h2>
+        <blockquote>
+          " Here's an example blockquote. Long quotes can go in places like this, since these are usually citations from other authors/sources, the vertical bar on the left is used to add indentation or call special attention. "
+        </blockquote>
+        <blockquote class="tomato">Alternate color</blockquote>
+        <blockquote class="leaf">Alternate color</blockquote>
+        <blockquote class="wheat">Alternate color</blockquote>
+        <blockquote class="berry">Alternate color</blockquote>
+        <blockquote class="stone">Alternate color</blockquote>
+        <details class="code-sample">
+          <summary>Show me a code sample:</summary>
+          <div class="codewrap">
+            <code>
+              &lt;blockquote&gt;Regular blockquote&lt;/blockquote&gt;<br>
+              &lt;blockquote class="tomato"&gt;Tomato blockquote&lt;/blockquote&gt;<br>
+              &lt;blockquote class="leaf"&gt;Leaf blockquote&lt;/blockquote&gt;<br>
+              &lt;blockquote class="wheat"&gt;Wheat blockquote&lt;/blockquote&gt;<br>
+              &lt;blockquote class="berry"&gt;Berry blockquote&lt;/blockquote&gt;<br>
+              &lt;blockquote class="stone"&gt;Stone blockquote&lt;/blockquote&gt;
+            </code>
+          </div>
+        </details>
+      </section>
+      <!-- Code snippets -->
+      <section id="code-snippets">
+        <h2>Code snippet:</h2>
+        <div class="codewrap">
+          <code>
+            &lt;a href="somewhere.html"&gt;
+        </code>
+        </div>
+        <p><br>You can also create color-based formatted code snippets, similar to what you'd see in an IDE:</p><br>
+        <div class="codewrap">
+          <code>
+            <span class="stone">&lt;</span><span class="wheat">a</span> <span class="berry">href</span><span class="stone">=</span><span class="tomato">"somewhere.html"</span><span class="stone">&gt;</span>
+          </code>
+        </div>
+        <details class="code-sample">
+          <summary>Show me a code sample:</summary>
+          <div class="codewrap">
+            <code>
+              &lt;code&gt;&amp;lt;a href="somewhere.html"&amp;gt;&lt;/code&gt;<br>
+            </code>
+          </div>
+        </details>
+      </section>
+      <!-- Input forms -->
+      <section id="input-forms">
+        <h2>Input form:</h2>
+        <form>
+            <label>Text input:</label>
+            <input type="text" value="Text input">
+            <label>Tomato text input:</label>
+            <input type="text" value="Text input" class="tomato">
+            <label>Leaf text input:</label>
+            <input type="text" value="Text input" class="leaf">
+            <label>Wheat text input:</label>
+            <input type="text" value="Text input" class="wheat">
+            <label>Berry text input:</label>
+            <input type="text" value="Text input" class="berry">
+            <label>Stone text input:</label>
+            <input type="text" value="Text input" class="stone"><br>
+            <label>Standard button:</label>
+            <input type="button" value="Click me">
+            <label>Tomato button:</label>
+            <input type="button" value="Click me" class="tomato">
+            <label>Leaf button:</label>
+            <input type="button" value="Click me" class="leaf">
+            <label>Wheat button:</label>
+            <input type="button" value="Click me" class="wheat">
+            <label>Berry button:</label>
+            <input type="button" value="Click me" class="berry">
+            <label>Stone button:</label>
+            <input type="button" value="Click me" class="stone"><br>
+            <label>Textarea:</label>
+            <textarea></textarea>
+            <label>Tomato textarea:</label>
+            <textarea class="tomato"></textarea>
+            <label>Leaf textarea:</label>
+            <textarea class="leaf"></textarea>
+            <label>Wheat textarea:</label>
+            <textarea class="wheat"></textarea>
+            <label>Berry textarea:</label>
+            <textarea class="berry"></textarea>
+            <input type="submit" value="Finished!">
+        </form>
+        <div class="dark">
+          <h3>Special dark edition:</h3>
+          <form class="dark">
+            <label>Text:</label>
+            <input type="text" value="Text input" class="dark"><br>
+            <label>Buttons:</label>
+            <input type="button" value="Click me" class="dark"><br>
+          </form>
+        </div>
+        <div class="dark-blue">
+          <h3>Special blue edition:</h3>
+          <form class="dark-blue">
+            <label>Text:</label>
+            <input type="text" value="Text input" class="dark"><br>
+            <label>Buttons:</label>
+            <input type="button" value="Click me" class="dark"><br>
+          </form>
+        </div>
+        <details class="code-sample">
+          <summary>Show me a code sample:</summary>
+          <div class="codewrap">
+            <code>
+              &lt;input type="text" value="Text input"&gt;<br>
+              &lt;input type="text" value="Text input" class="tomato"&gt;<br>
+              &lt;input type="button" value="Text input" class="leaf"&gt;<br>
+            </code>
+          </div>
+        </details>
+      </section>
+      <!-- Selects -->
+      <section id="selects">
+        <h2>Selects:</h2>
+        <label>Select with options</label>
+        <select>
+          <option>Option 1</option>
+          <option>Option 2</option>
+          <option>Option 3</option>
+        </select>
+        <select class="tomato">
+          <option>Option 1</option>
+          <option>Option 2</option>
+          <option>Option 3</option>
+        </select>
+        <select class="leaf">
+          <option>Option 1</option>
+          <option>Option 2</option>
+          <option>Option 3</option>
+        </select>
+        <select class="wheat">
+          <option>Option 1</option>
+          <option>Option 2</option>
+          <option>Option 3</option>
+        </select>
+        <select class="berry">
+          <option>Option 1</option>
+          <option>Option 2</option>
+          <option>Option 3</option>
+        </select>
+        <select class="stone">
+          <option>Option 1</option>
+          <option>Option 2</option>
+          <option>Option 3</option>
+        </select>
+        <details class="code-sample">
+          <summary>Show me a code sample:</summary>
+          <div class="codewrap">
+            <code>
+              &lt;select class="berry"&gt;<br>
+              &nbsp;&lt;option&gt;Option&lt;/option&gt;<br>
+              &lt;/select&gt;
+            </code>
+          </div>
+        </details>
+      </section>
+      <!-- Lists -->
+      <section id="lists">
+        <h2>Lists:</h2>
+        <h3><u>Unordered</u></h3>
+        <ul>
+          <li>Something</li>
+          <li>Something else</li>
+        </ul>
+        <h3><u>Ordered</u></h3>
+        <ol>
+          <li>First</li>
+          <li>Second</li>
+        </ol>
+        <ol type="A">
+          <li>First</li>
+          <li>Second</li>
+        </ol>
+        <ol type="a">
+          <li>First</li>
+          <li>Second</li>
+        </ol>
+        <ol type="I">
+          <li>First</li>
+          <li>Second</li>
+        </ol>
+        <ol type="i">
+          <li>First</li>
+          <li>Second</li>
+        </ol>
+        <h3><u>Descriptions</u></h3>
+        <p>Alternating colors can be used to group together different term categories or types. Try also adding aria-labels to improve accessibility and make sure that color isn't the only thing used to emphasize meaning.</p>
+        <dl>
+          <dt>Term</dt>
+          <dd>brief description</dd>
+          <dt class="tomato">Tomato</dt>
+          <dd>alternate color</dd>
+          <dt class="leaf">Leaf</dt>
+          <dd>alternate color</dd>
+          <dt class="wheat">Wheat</dt>
+          <dd>alternate color</dd>
+          <dt class="berry">Berry</dt>
+          <dd>alternate color</dd>
+          <dt class="stone">Stone</dt>
+          <dd>alternate color</dd>
+        </dl>
+        <details class="code-sample">
+          <summary>Show me a code sample:</summary>
+          <div class="codewrap">
+            <code>
+              &lt;ul&gt;<br>
+              &nbsp;&lt;li&gt;List item&lt;/li&gt;<br>
+              &lt;/ul&gt;<br>
+              &lt;ul&gt;<br>
+              &nbsp;&lt;li&gt;List item&lt;/li&gt;<br>
+              &lt;/ul&gt;<br>
+              &lt;dl&gt;<br>
+              &nbsp;&lt;dt&gt;Term&lt;/dt&gt;<br>
+              &nbsp;&lt;dd&gt;brief description&lt;/dd&gt;<br>
+              &nbsp;&lt;dt class="stone"&gt;Stone&lt;/dt&gt;<br>
+              &nbsp;&lt;dd&gt;brief description&lt;/dd&gt;<br>
+              &lt;/dl&gt;
+            </code>
+          </div>
+        </details>
+      </section>
+      <!-- Tables -->
+      <section id="tables">
+        <h2>Tables:</h2>
+        <table>
+          <caption>This is a caption to explain table data.</caption>
+          <thead>
+            <tr>
+              <th>Col 1</th>
+              <th>Col 2</th>
+              <th>Col 3</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Item</td>
+              <td>Item</td>
+              <td>Item</td>
+            </tr>
+            <tr>
+              <td>Item</td>
+              <td>Item</td>
+              <td>Item</td>
+            </tr>
+            <tr>
+              <td>Item</td>
+              <td>Item</td>
+              <td>Item</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td>Item</td>
+              <td>Item</td>
+              <td>Item</td>
+            </tr>
+          </tfoot>
+        </table>
+        <p><br>Tables can also be styled to match 'flavors' seen in other elements thus far in the theme:<br></p>
+        <table>
+          <caption>*** Alternate colors! ***</caption>
+          <thead>
+            <tr>
+              <th class="tomato">Col 1</th>
+              <th class="leaf">Col 2</th>
+              <th class="wheat">Col 3</th>
+              <th class="berry">Col 4</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Item</td>
+              <td>Item</td>
+              <td>Item</td>
+              <td class="stone">Item</td>
+            </tr>
+            <tr>
+              <td>Item</td>
+              <td>Item</td>
+              <td>Item</td>
+              <td class="stone">Item</td>
+            </tr>
+            <tr>
+              <td>Item</td>
+              <td>Item</td>
+              <td>Item</td>
+              <td class="stone">Item</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td class="tomato">Item</td>
+              <td class="leaf">Item</td>
+              <td class="wheat">Item</td>
+              <td class="berry stone">Item</td>
+            </tr>
+          </tfoot>
+        </table>
+        <div class="dark">
+          <h3>Special dark edition:</h3>
+          <table>
+            <caption>This is the same table style, only darker.</caption>
+            <thead>
+              <tr>
+                <th>Col 1</th>
+                <th>Col 2</th>
+                <th>Col 3</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Item</td>
+                <td>Item</td>
+                <td>Item</td>
+              </tr>
+              <tr>
+                <td>Item</td>
+                <td>Item</td>
+                <td>Item</td>
+              </tr>
+              <tr>
+                <td>Item</td>
+                <td>Item</td>
+                <td>Item</td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <td>Item</td>
+                <td>Item</td>
+                <td>Item</td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+        <details class="code-sample">
+          <summary>Show me a code sample:</summary>
+          <div class="codewrap">
+            <code>
+              &lt;table&gt;<br>
+              &nbsp;&lt;thead&gt;<br>
+              &nbsp;&nbsp;&lt;tr&gt;<br>
+              &nbsp;&nbsp;&nbsp;&lt;th class="tomato"&gt;Col 1&lt;/th&gt;<br>
+              &nbsp;&nbsp;&lt;/tr&gt;<br>
+              &nbsp;&lt;/thead&gt;<br>
+              &nbsp;&lt;tbody&gt;<br>
+              &nbsp;&nbsp;&lt;tr&gt;<br>
+              &nbsp;&nbsp;&nbsp;&lt;td class="leaf"&gt;Item&lt;/td&gt;<br>
+              &nbsp;&nbsp;&lt;/tr&gt;<br>
+              &nbsp;&nbsp;&lt;tr&gt;<br>
+              &nbsp;&nbsp;&nbsp;&lt;td class="wheat"&gt;Item&lt;/td&gt;<br>
+              &nbsp;&nbsp;&lt;/tr&gt;<br>
+              &nbsp;&nbsp;&lt;tr&gt;<br>
+              &nbsp;&nbsp;&nbsp;&lt;td class="berry"&gt;Item&lt;/td&gt;<br>
+              &nbsp;&nbsp;&lt;/tr&gt;<br>
+              &nbsp;&lt;/tbody&gt;<br>
+              &nbsp;&lt;tfoot&gt;<br>
+              &nbsp;&nbsp;&lt;tr&gt;<br>
+              &nbsp;&nbsp;&nbsp;&lt;td class="stone"&gt;Item&lt;/td&gt;<br>
+              &nbsp;&nbsp;&lt;/tr&gt;<br>
+              &nbsp;&lt;/tfoot&gt;<br>
+              &lt;/table&gt;
+            </code>
+          </div>
+        </details>
+      </section>
+      <!-- Icons -->
+      <section id="icons">
+        <h2>Icons:</h2>
+        <p>48 icons included: (credit goes to Sogomn and Paul Barden.)</p>
+        <img class="icon" src="loader.png" data-src="icons/add_folder.png" alt="sample icon">
+        <img class="icon" src="loader.png" data-src="icons/alert.png" alt="sample icon">
+        <img class="icon" src="loader.png" data-src="icons/alert_alt.png" alt="sample icon">
+        <img class="icon" src="loader.png" data-src="icons/button_alert.png" alt="sample icon">
+        <img class="icon" src="loader.png" data-src="icons/button_error.png" alt="sample icon">
+        <img class="icon" src="loader.png" data-src="icons/chat.png" alt="sample icon">
+        <img class="icon" src="loader.png" data-src="icons/clipboard.png" alt="sample icon">
+        <img class="icon" src="loader.png" data-src="icons/connecting.png" alt="sample icon">
+        <img class="icon" src="loader.png" data-src="icons/connection.png" alt="sample icon">
+        <img class="icon" src="loader.png" data-src="icons/console.png" alt="sample icon">
+        <img class="icon" src="loader.png" data-src="icons/cross.png" alt="sample icon">
+        <img class="icon" src="loader.png" data-src="icons/cursor_select.png" alt="sample icon">
+        <img class="icon" src="loader.png" data-src="icons/database.png" alt="sample icon">
+        <img class="icon" src="loader.png" data-src="icons/delete.png" alt="sample icon">
+        <img class="icon" src="loader.png" data-src="icons/document.png" alt="sample icon">
+        <img class="icon" src="loader.png" data-src="icons/download.png" alt="sample icon">
+        <img class="icon" src="loader.png" data-src="icons/download_alt.png" alt="sample icon">
+        <img class="icon" src="loader.png" data-src="icons/drive.png" alt="sample icon">
+        <img class="icon" src="loader.png" data-src="icons/error.png" alt="sample icon">
+        <img class="icon" src="loader.png" data-src="icons/file.png" alt="sample icon">
+        <img class="icon" src="loader.png" data-src="icons/find.png" alt="sample icon">
+        <img class="icon" src="loader.png" data-src="icons/folder.png" alt="sample icon">
+        <img class="icon" src="loader.png" data-src="icons/folder_alt.png" alt="sample icon">
+        <img class="icon" src="loader.png" data-src="icons/help.png" alt="sample icon">
+        <img class="icon" src="loader.png" data-src="icons/home.png" alt="sample icon">
+        <img class="icon" src="loader.png" data-src="icons/info.png" alt="sample icon">
+        <img class="icon" src="loader.png" data-src="icons/inspect.png" alt="sample icon">
+        <img class="icon" src="loader.png" data-src="icons/internet.png" alt="sample icon">
+        <img class="icon" src="loader.png" data-src="icons/keyboard.png" alt="sample icon">
+        <img class="icon" src="loader.png" data-src="icons/message.png" alt="sample icon">
+        <img class="icon" src="loader.png" data-src="icons/microphone.png" alt="sample icon">
+        <img class="icon" src="loader.png" data-src="icons/monitor.png" alt="sample icon">
+        <img class="icon" src="loader.png" data-src="icons/mouse_rat.png" alt="sample icon">
+        <img class="icon" src="loader.png" data-src="icons/music.png" alt="sample icon">
+        <img class="icon" src="loader.png" data-src="icons/photo.png" alt="sample icon">
+        <img class="icon" src="loader.png" data-src="icons/question.png" alt="sample icon">
+        <img class="icon" src="loader.png" data-src="icons/save.png" alt="sample icon">
+        <img class="icon" src="loader.png" data-src="icons/settings.png" alt="sample icon">
+        <img class="icon" src="loader.png" data-src="icons/target.png" alt="sample icon">
+        <img class="icon" src="loader.png" data-src="icons/tools.png" alt="sample icon">
+        <img class="icon" src="loader.png" data-src="icons/upload.png" alt="sample icon">
+        <img class="icon" src="loader.png" data-src="icons/upload_alt.png" alt="sample icon">
+        <img class="icon" src="loader.png" data-src="icons/waiting.png" alt="sample icon">
+        <img class="icon" src="loader.png" data-src="icons/like.png" alt="sample icon">
+        <img class="icon" src="loader.png" data-src="icons/starfish.png" alt="sample icon">
+        <img class="icon" src="loader.png" data-src="icons/heart.png" alt="sample icon">
+        <img class="icon" src="loader.png" data-src="icons/cursor.png" alt="sample icon">
+        <img class="icon" src="loader.png" data-src="icons/grab.png" alt="sample icon">
+        <div class="cutout">
+          <p><span class="tomato">BONUS!</span> Large icons are also available:</p>
+          <h4>*** 64x64 ***</h4>
+          <img class="icon-large" src="loader.png" data-src="icons/add_folder.png" alt="sample icon">
+          <img class="icon-large" src="loader.png" data-src="icons/alert.png" alt="sample icon">
+          <img class="icon-large" src="loader.png" data-src="icons/alert_alt.png" alt="sample icon">
+          <img class="icon-large" src="loader.png" data-src="icons/button_alert.png" alt="sample icon">
+          <img class="icon-large" src="loader.png" data-src="icons/button_error.png" alt="sample icon">
+          <img class="icon-large" src="loader.png" data-src="icons/chat.png" alt="sample icon">
+          <img class="icon-large" src="loader.png" data-src="icons/clipboard.png" alt="sample icon">
+          <img class="icon-large" src="loader.png" data-src="icons/connecting.png" alt="sample icon">
+          <img class="icon-large" src="loader.png" data-src="icons/connection.png" alt="sample icon">
+          <img class="icon-large" src="loader.png" data-src="icons/console.png" alt="sample icon">
+          <img class="icon-large" src="loader.png" data-src="icons/cross.png" alt="sample icon">
+          <img class="icon-large" src="loader.png" data-src="icons/cursor_select.png" alt="sample icon">
+          <img class="icon-large" src="loader.png" data-src="icons/database.png" alt="sample icon">
+          <img class="icon-large" src="loader.png" data-src="icons/delete.png" alt="sample icon">
+          <img class="icon-large" src="loader.png" data-src="icons/document.png" alt="sample icon">
+          <img class="icon-large" src="loader.png" data-src="icons/download.png" alt="sample icon">
+          <img class="icon-large" src="loader.png" data-src="icons/download_alt.png" alt="sample icon">
+          <img class="icon-large" src="loader.png" data-src="icons/drive.png" alt="sample icon">
+          <img class="icon-large" src="loader.png" data-src="icons/error.png" alt="sample icon">
+          <img class="icon-large" src="loader.png" data-src="icons/file.png" alt="sample icon">
+          <img class="icon-large" src="loader.png" data-src="icons/find.png" alt="sample icon">
+          <img class="icon-large" src="loader.png" data-src="icons/folder.png" alt="sample icon">
+          <img class="icon-large" src="loader.png" data-src="icons/folder_alt.png" alt="sample icon">
+          <img class="icon-large" src="loader.png" data-src="icons/help.png" alt="sample icon">
+          <img class="icon-large" src="loader.png" data-src="icons/home.png" alt="sample icon">
+          <img class="icon-large" src="loader.png" data-src="icons/info.png" alt="sample icon">
+          <img class="icon-large" src="loader.png" data-src="icons/inspect.png" alt="sample icon">
+          <img class="icon-large" src="loader.png" data-src="icons/internet.png" alt="sample icon">
+          <img class="icon-large" src="loader.png" data-src="icons/keyboard.png" alt="sample icon">
+          <img class="icon-large" src="loader.png" data-src="icons/message.png" alt="sample icon">
+          <img class="icon-large" src="loader.png" data-src="icons/microphone.png" alt="sample icon">
+          <img class="icon-large" src="loader.png" data-src="icons/monitor.png" alt="sample icon">
+          <img class="icon-large" src="loader.png" data-src="icons/mouse_rat.png" alt="sample icon">
+          <img class="icon-large" src="loader.png" data-src="icons/music.png" alt="sample icon">
+          <img class="icon-large" src="loader.png" data-src="icons/photo.png" alt="sample icon">
+          <img class="icon-large" src="loader.png" data-src="icons/question.png" alt="sample icon">
+          <img class="icon-large" src="loader.png" data-src="icons/save.png" alt="sample icon">
+          <img class="icon-large" src="loader.png" data-src="icons/settings.png" alt="sample icon">
+          <img class="icon-large" src="loader.png" data-src="icons/target.png" alt="sample icon">
+          <img class="icon-large" src="loader.png" data-src="icons/tools.png" alt="sample icon">
+          <img class="icon-large" src="loader.png" data-src="icons/upload.png" alt="sample icon">
+          <img class="icon-large" src="loader.png" data-src="icons/upload_alt.png" alt="sample icon">
+          <img class="icon-large" src="loader.png" data-src="icons/waiting.png" alt="sample icon">
+          <img class="icon-large" src="loader.png" data-src="icons/like.png" alt="sample icon">
+          <img class="icon-large" src="loader.png" data-src="icons/starfish.png" alt="sample icon">
+          <img class="icon-large" src="loader.png" data-src="icons/heart.png" alt="sample icon">
+          <img class="icon-large" src="loader.png" data-src="icons/cursor.png" alt="sample icon">
+          <img class="icon-large" src="loader.png" data-src="icons/grab.png" alt="sample icon">
+          <br><br>
+          <h4>*** 96x96 ***</h4>
+          <img class="icon-super" src="loader.png" data-src="icons/add_folder.png" alt="sample icon">
+          <img class="icon-super" src="loader.png" data-src="icons/alert.png" alt="sample icon">
+          <img class="icon-super" src="loader.png" data-src="icons/alert_alt.png" alt="sample icon">
+          <img class="icon-super" src="loader.png" data-src="icons/button_alert.png" alt="sample icon">
+          <img class="icon-super" src="loader.png" data-src="icons/button_error.png" alt="sample icon">
+          <img class="icon-super" src="loader.png" data-src="icons/chat.png" alt="sample icon">
+          <img class="icon-super" src="loader.png" data-src="icons/clipboard.png" alt="sample icon">
+          <img class="icon-super" src="loader.png" data-src="icons/connecting.png" alt="sample icon">
+          <img class="icon-super" src="loader.png" data-src="icons/connection.png" alt="sample icon">
+          <img class="icon-super" src="loader.png" data-src="icons/console.png" alt="sample icon">
+          <img class="icon-super" src="loader.png" data-src="icons/cross.png" alt="sample icon">
+          <img class="icon-super" src="loader.png" data-src="icons/cursor_select.png" alt="sample icon">
+          <img class="icon-super" src="loader.png" data-src="icons/database.png" alt="sample icon">
+          <img class="icon-super" src="loader.png" data-src="icons/delete.png" alt="sample icon">
+          <img class="icon-super" src="loader.png" data-src="icons/document.png" alt="sample icon">
+          <img class="icon-super" src="loader.png" data-src="icons/download.png" alt="sample icon">
+          <img class="icon-super" src="loader.png" data-src="icons/download_alt.png" alt="sample icon">
+          <img class="icon-super" src="loader.png" data-src="icons/drive.png" alt="sample icon">
+          <img class="icon-super" src="loader.png" data-src="icons/error.png" alt="sample icon">
+          <img class="icon-super" src="loader.png" data-src="icons/file.png" alt="sample icon">
+          <img class="icon-super" src="loader.png" data-src="icons/find.png" alt="sample icon">
+          <img class="icon-super" src="loader.png" data-src="icons/folder.png" alt="sample icon">
+          <img class="icon-super" src="loader.png" data-src="icons/folder_alt.png" alt="sample icon">
+          <img class="icon-super" src="loader.png" data-src="icons/help.png" alt="sample icon">
+          <img class="icon-super" src="loader.png" data-src="icons/home.png" alt="sample icon">
+          <img class="icon-super" src="loader.png" data-src="icons/info.png" alt="sample icon">
+          <img class="icon-super" src="loader.png" data-src="icons/inspect.png" alt="sample icon">
+          <img class="icon-super" src="loader.png" data-src="icons/internet.png" alt="sample icon">
+          <img class="icon-super" src="loader.png" data-src="icons/keyboard.png" alt="sample icon">
+          <img class="icon-super" src="loader.png" data-src="icons/message.png" alt="sample icon">
+          <img class="icon-super" src="loader.png" data-src="icons/microphone.png" alt="sample icon">
+          <img class="icon-super" src="loader.png" data-src="icons/monitor.png" alt="sample icon">
+          <img class="icon-super" src="loader.png" data-src="icons/mouse_rat.png" alt="sample icon">
+          <img class="icon-super" src="loader.png" data-src="icons/music.png" alt="sample icon">
+          <img class="icon-super" src="loader.png" data-src="icons/photo.png" alt="sample icon">
+          <img class="icon-super" src="loader.png" data-src="icons/question.png" alt="sample icon">
+          <img class="icon-super" src="loader.png" data-src="icons/save.png" alt="sample icon">
+          <img class="icon-super" src="loader.png" data-src="icons/settings.png" alt="sample icon">
+          <img class="icon-super" src="loader.png" data-src="icons/target.png" alt="sample icon">
+          <img class="icon-super" src="loader.png" data-src="icons/tools.png" alt="sample icon">
+          <img class="icon-super" src="loader.png" data-src="icons/upload.png" alt="sample icon">
+          <img class="icon-super" src="loader.png" data-src="icons/upload_alt.png" alt="sample icon">
+          <img class="icon-super" src="loader.png" data-src="icons/waiting.png" alt="sample icon">
+          <img class="icon-super" src="loader.png" data-src="icons/like.png" alt="sample icon">
+          <img class="icon-super" src="loader.png" data-src="icons/starfish.png" alt="sample icon">
+          <img class="icon-super" src="loader.png" data-src="icons/heart.png" alt="sample icon">
+          <img class="icon-super" src="loader.png" data-src="icons/cursor.png" alt="sample icon">
+          <img class="icon-super" src="loader.png" data-src="icons/grab.png" alt="sample icon">
+        </div>
+      </section>
+      <!-- Details -->
+      <section id="details">
+        <h2>Details:</h2>
+        <details open>
+          <summary>Click to view more details:</summary>
+          <p>More details here. This one is expanded when the page is loaded. Please note that the arrows need to be disabled through webkit in order to display correctly in Chrome, the most popular browser family in the world, however this is not allowed in order to pass W3C validation. This has been commented out during this course and will not display properly due to this course restriction.</p>
+        </details>
+        <details>
+          <summary>Click to view more details:</summary>
+          <p>More details here!</p>
+        </details>
+        <details>
+          <summary>Click to view more details:</summary>
+          <p>More details here!</p>
+        </details>
+        <details>
+          <summary>Click to view more details:</summary>
+          <p>More details here!</p>
+        </details>
+        <details class="code-sample">
+          <summary>Show me a code sample:</summary>
+          <div class="codewrap">
+            <code>
+              &lt;details&gt;<br>
+              &nbsp;&lt;summary&gt;Click to view more details:&lt;/summary&gt;<br>
+              &nbsp;&lt;p&gt;More details here!&lt;/p&gt;<br>
+              &lt;/details&gt;
+            </code>
+          </div>
+        </details>
+      </section>
+      <!-- 2-Column Content -->
+      <section id="two-col-content" class="content">
+        <h2>2-column content:</h2>
+        <div class="two-card">
+          <p>First card content goes here. This is just text but mon-icons could also be addded.</p>
+        </div>
+        <div class="two-card tomato">
+          <p>Second card content goes here. This is just text but mon-icons could also be addded.</p>
+        </div>
+        <div class="two-card wheat">
+          <p>Third card content goes here. This is just text but mon-icons could also be addded.</p>
+        </div>
+        <div class="two-card">
+          <p>Fourth card content goes here. This is just text but mon-icons could also be addded.</p>
+        </div>
+        <div class="code-details">
+          <details class="code-sample">
+            <summary>Show me a code sample:</summary>
+            <div class="codewrap">
+              <code>
+                &lt;div class="two-card"&gt;<br>
+                &nbsp;&lt;p&gt;First card content goes here.&lt;/p&gt;<br>
+                &lt;div&gt;<br>
+                &lt;div class="two-card leaf"&gt;<br>
+                &nbsp;&lt;p&gt;First card content goes here.&lt;/p&gt;<br>
+                &lt;div&gt;
+              </code>
+            </div>
+          </details>
+        </div>
+      </section>
+      <!-- 3-Column Content -->
+      <section id="three-col-content" class="content">
+        <h2>3-column content:</h2>
+        <div class="three-card leaf">
+          <p>First card content goes here. This is just text but mon-icons could also be addded.</p>
+        </div>
+        <div class="three-card">
+          <p>Second card content goes here. This is just text but mon-icons could also be addded.</p>
+        </div>
+        <div class="three-card">
+          <p>Third card content goes here. This is just text but mon-icons could also be addded.</p>
+        </div>
+        <div class="three-card">
+          <p>Fourth card content goes here. This is just text but mon-icons could also be addded.</p>
+        </div>
+        <div class="three-card">
+          <p>Fifth card content goes here. This is just text but mon-icons could also be addded.</p>
+        </div>
+        <div class="three-card berry">
+          <p>Sixth card content goes here. This is just text but mon-icons could also be addded.</p>
+        </div>
+        <div class="code-details">
+          <details class="code-sample">
+            <summary>Show me a code sample:</summary>
+            <div class="codewrap">
+              <code>
+                &lt;div class="three-card"&gt;<br>
+                &nbsp;&lt;p&gt;First card content goes here.&lt;/p&gt;<br>
+                &lt;div&gt;<br>
+                &lt;div class="three-card tomato"&gt;<br>
+                &nbsp;&lt;p&gt;First card content goes here.&lt;/p&gt;<br>
+                &lt;div&gt;<br>
+                &lt;div class="three-card wheat"&gt;<br>
+                &nbsp;&lt;p&gt;First card content goes here.&lt;/p&gt;<br>
+                &lt;div&gt;
+              </code>
+            </div>
+          </details>
+        </div>
+      </section>
+      <!-- Callouts -->
+      <section id="callouts" class="content">
+        <h2>Callouts:</h2>
+        <div class="callout-frame">
+          <div class="callout">
+            <img class="icon-large" src="loader.png" data-src="icons/message.png" alt="example callout icon">
+          </div>
+          <div class="callout-message">
+            <p>Callout message text goes here. Callouts use a single icon with a text message. The message can be short or lengthy, just try to get the point across.</p>
+          </div>
+        </div>
+        <div class="callout-frame">
+          <div class="callout">
+            <img class="icon" src="loader.png" data-src="icons/cross.png" alt="example callout icon">
+          </div>
+          <div class="callout-message">
+            <p><span class="tomato">Color can be changed for different messages.</span></p>
+          </div>
+        </div>
+        <div class="callout-frame">
+          <div class="callout">
+            <img class="icon" src="loader.png" data-src="icons/alert.png" alt="example callout icon">
+          </div>
+          <div class="callout-message">
+            <p><span class="leaf">Color can be changed for different messages.</span></p>
+          </div>
+        </div>
+        <div class="callout-frame">
+          <div class="callout">
+            <img class="icon" src="loader.png" data-src="icons/alert_alt.png" alt="example callout icon">
+          </div>
+          <div class="callout-message">
+            <p><span class="wheat">Color can be changed for different messages.</span></p>
+          </div>
+        </div>
+        <div class="callout-frame">
+          <div class="callout">
+            <img class="icon" src="loader.png" data-src="icons/info.png" alt="example callout icon">
+          </div>
+          <div class="callout-message">
+            <p><span class="berry">Color can be changed for different messages.</span></p>
+          </div>
+        </div>
+        <div class="code-details">
+          <details class="code-sample">
+            <summary>Show me a code sample:</summary>
+            <div class="codewrap">
+              <code>
+                &lt;div class="callout-frame"&gt;<br>
+                &nbsp;&lt;div class="callout"&gt;<br>
+                &nbsp;&nbsp;&lt;img class="icon-large" src="loader.png" data-src="icons/message.png" alt="example callout icon"&gt;<br>
+                &nbsp;&lt;/div&gt;<br>
+                &nbsp;&lt;div class="callout-message"&gt;<br>
+                &nbsp;&nbsp;&lt;p&gt;Callout message text goes here.&lt;/p&gt;<br>
+                &nbsp;&lt;/div&gt;<br>
+                &lt;/div&gt;
+              </code>
+            </div>
+          </details>
+        </div>
+      </section>
+      <!-- Card examples -->
+      <section id="card-examples" class="content">
+        <h2>Card examples:</h2>
+        <div class="full-card lazybg" data-bg="images/Background21.png" style="background-size: cover;">
+          <div class="tomato inner">
+            <h3>This card has a heading.</h3>
+            <p>And some type of text. All of this text goes over a background image.</p>
+          </div>
+        </div>
+        <div class="code-details">
+          <details class="code-sample">
+            <summary>Show me a code sample:</summary>
+            <div class="codewrap">
+              <code>
+                &lt;div class="full-card" style="background: url(image.png);"&gt;<br>
+                &nbsp;&lt;div class="tomato inner"&gt;<br>
+                &nbsp;&nbsp;&lt;h3&gt;This card has a heading.&lt;h3&gt;<br>
+                &nbsp;&nbsp;&lt;p&gt;And some type of text.&lt;/p&gt;<br>
+                &nbsp;&lt;/div&gt;<br>
+                &lt;/div&gt;
+              </code>
+            </div>
+          </details>
+        </div>
+        <div class="full-card">
+          <div class="card hero-image lazybg" data-bg="top.png" style="background-size: cover; background-position: center;"></div>
+          <div class="card content">
+            <h3>Heading</h3>
+            <p>... and some card text, too. Cards use a single image either on the left or right with a text message. The message can be short or lengthy, just try to get the point across. You might put something like a blog excerpt or a brief product description here.<br><br>Cards are fun.</p>
+          </div>
+        </div>
+        <div class="full-card">
+          <div class="card content">
+            <h3>Heading</h3>
+            <p>... and some card text, too. Cards use a single image either on the left or right with a text message. The message can be short or lengthy, just try to get the point across. You might put something like a blog excerpt or a brief product description here.<br><br>Cards are fun.</p>
+          </div>
+          <div class="card hero-image lazybg" data-bg="hero-2.png" style="background-size: cover; background-position: center;"></div>
+        </div>
+        <div class="code-details">
+          <details class="code-sample">
+            <summary>Show me a code sample:</summary>
+            <div class="codewrap">
+              <code>
+                &lt;div class="full-card"&gt;<br>
+                &nbsp;&lt;div class="card hero-image" style="background: url(hero.png);background-size: cover; background-position: center;"&gt;&lt;/div&gt;<br>
+                &nbsp;&lt;div class="card content"&gt;<br>
+                &nbsp;&nbsp;&lt;h3&gt;Heading&lt;/h3&gt;<br>
+                &nbsp;&nbsp;&lt;p&gt;... and some card text, too.&lt;/p&gt;<br>
+                &nbsp;&lt;/div&gt;<br>
+                &lt;/div&gt;
+              </code>
+            </div>
+          </details>
+        </div>
+        <div class="dual-card">
+          <div class="card content-left hero-bg lazybg" data-bg="top.png" style="background-size: cover; background-position: center;"></div>
+          <div class="card content-right">
+            <h3>Heading</h3>
+            <p>... and some card text, too. Cards use a single image either on the left or right with a text message. The message can be short or lengthy, just try to get the point across. You might put something like a blog excerpt or a brief product description here.<br><br>Cards are fun.</p>
+          </div>
+        </div>
+        <div class="dual-card">
+          <div class="card content-left">
+            <h3>Heading</h3>
+            <p>... and some card text, too. Cards use a single image either on the left or right with a text message. The message can be short or lengthy, just try to get the point across. You might put something like a blog excerpt or a brief product description here.<br><br>Cards are fun.</p>
+          </div>
+          <div class="card content-right hero-bg lazybg" data-bg="hero-2.png" style="background-size: cover; background-position: center;"></div>
+        </div>
+        <div class="code-details">
+          <details class="code-sample">
+            <summary>Show me a code sample:</summary>
+            <div class="codewrap">
+              <code>
+                &lt;div class="dual-card"&gt;<br>
+                &nbsp;&lt;div class="card content-left"&gt;<br>
+                &nbsp;&nbsp;&lt;h3&gt;Heading&lt;/h3&gt;<br>
+                &nbsp;&nbsp;&lt;p&gt;... and some card text, too.&lt;/p&gt;<br>
+                &nbsp;&lt;/div&gt;<br>
+                &nbsp;&lt;div class="card content-right hero-bg" style="background-size: cover; background-position: center;"&gt;&lt;div&gt;<br>
+                &lt;div&gt;
+              </code>
+            </div>
+          </details>
+        </div>
+        <p>Also available in other colors:</p>
+        <div class="dual-card dark-blue">
+          <div class="card content-left hero-bg lazybg" data-bg="top.png" style="background-size: cover; background-position: center;"></div>
+          <div class="card content-right">
+            <h3>Heading</h3>
+            <p>... and some card text, too. Cards use a single image either on the left or right with a text message. The message can be short or lengthy, just try to get the point across. You might put something like a blog excerpt or a brief product description here.<br><br>Cards are fun.</p>
+          </div>
+        </div>
+        <div class="dual-card dark-black">
+          <div class="card content-left">
+            <h3>Heading</h3>
+            <p>... and some card text, too. Cards use a single image either on the left or right with a text message. The message can be short or lengthy, just try to get the point across. You might put something like a blog excerpt or a brief product description here.<br><br>Cards are fun.</p>
+          </div>
+          <div class="card content-right hero-bg lazybg" data-bg="hero-2.png" style="background-size: cover; background-position: center;"></div>
+        </div>
+        <div class="full-card dark-blue">
+          <div class="card hero-image lazybg" data-bg="top.png" style="background-size: cover; background-position: center;"></div>
+          <div class="card content">
+            <h3>Heading</h3>
+            <p>... and some card text, too. Cards use a single image either on the left or right with a text message. The message can be short or lengthy, just try to get the point across. You might put something like a blog excerpt or a brief product description here.<br><br>Cards are fun.</p>
+          </div>
+        </div>
+        <div class="full-card dark-black">
+          <div class="card content">
+            <h3>Heading</h3>
+            <p>... and some card text, too. Cards use a single image either on the left or right with a text message. The message can be short or lengthy, just try to get the point across. You might put something like a blog excerpt or a brief product description here.<br><br>Cards are fun.</p>
+          </div>
+          <div class="card hero-image lazybg" data-bg="hero-2.png" style="background-size: cover; background-position: center;"></div>
+        </div>
+      </section>
+      <!-- Audio & Video -->
+      <section id="audio-videos">
+        <h2>Audio/Video:</h2>
+        <h3>Audio only:</h3>
+        <div class="audio-container">
+          <audio id="sample-audio">
+            <source src="ChamplooEndingWithIntroLowPass.ogg" type="audio/ogg">
+            <source src="ChamplooEndingWithIntroLowPass.mp3" type="audio/mp3">
+            Audio not supported.
+          </audio>
+          <script>
+            document.getElementById("sample-audio").ontimeupdate = function() {audioControl()};
+          </script>
+          <table class="audio-controls">
+            <caption>Featuring the smooth, lo-fi sounds of "Samurai Champloo Insipired Loop," performed by omfgdude.</caption>
+            <tbody>
+              <tr class="audio-track-container">
+                <td style="max-width: 40px; text-align: right;"><img class="icon" src="loader.png" data-src="icons/play.png" alt="sample icon" onclick="playTrack('sample-audio')"></td>
+                <td style="max-width: 40px; text-align: left;"><img class="icon" src="loader.png" data-src="icons/pause.png" alt="sample icon" onclick="pauseTrack('sample-audio')"></td>
+                <td><time id="track1Position">00:00</time></td>
+                <td>[</td>
+                <td onclick="traverseAudio('sample-audio', 0.01)"><mark id="tenp-tr">|</mark></td>
+                <td onclick="traverseAudio('sample-audio', 0.11)"><mark id="twentyp-tr">|</mark></td>
+                <td onclick="traverseAudio('sample-audio', 0.21)"><mark id="thirtyp-tr">|</mark></td>
+                <td onclick="traverseAudio('sample-audio', 0.31)"><mark id="fortyp-tr">|</mark></td>
+                <td onclick="traverseAudio('sample-audio', 0.41)"><mark id="fiftyp-tr">|</mark></td>
+                <td onclick="traverseAudio('sample-audio', 0.51)"><mark id="sixtyp-tr">|</mark></td>
+                <td onclick="traverseAudio('sample-audio', 0.61)"><mark id="seventyp-tr">|</mark></td>
+                <td onclick="traverseAudio('sample-audio', 0.71)"><mark id="eightyp-tr">|</mark></td>
+                <td onclick="traverseAudio('sample-audio', 0.81)"><mark id="ninetyp-tr">|</mark></td>
+                <td onclick="traverseAudio('sample-audio', 0.91)"><mark id="hundyp-tr">|</mark></td>
+                <td>]</td>
+                <td><time id="track1Duration">00:00</time></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <h3>Video w/ audio:</h3>
+        <div class="video-container">
+          <video id="sample-video" class="video-sample" preload="metadata" poster="poster.PNG">
+            <source src="https://ia600303.us.archive.org/31/items/secret_agent_x_9_ep1/ep1_512kb.mp4" type="video/mp4">
+            <source src="https://ia800303.us.archive.org/31/items/secret_agent_x_9_ep1/ep1.ogv" type="video/ogg">
+            Video not supported.
+          </video>
+          <script>
+            document.getElementById("sample-video").ontimeupdate = function() {videoControl()};
+          </script>
+          <table class="video-controls">
+            <caption>Featuring "Torpedo Rendezvous", the first chapter in the saga of Secret Agent X-9 in the 1945 serial by Universal Pictures.</caption>
+            <tbody>
+              <tr>
+                <td style="max-width: 40px; text-align: right;"><img class="icon" src="loader.png" data-src="icons/play.png" alt="sample icon" onclick="play('sample-video')"></td>
+                <td style="max-width: 40px; text-align: left;"><img class="icon" src="loader.png" data-src="icons/pause.png" alt="sample icon" onclick="pause('sample-video')"></td>
+                <td><time id="vid1Position">00:00</time></td>
+                <td>[</td>
+                <td onclick="traverseVideo('sample-video', 0.01)"><mark id="tenp">|</mark></td>
+                <td onclick="traverseVideo('sample-video', 0.11)"><mark id="twentyp">|</mark></td>
+                <td onclick="traverseVideo('sample-video', 0.21)"><mark id="thirtyp">|</mark></td>
+                <td onclick="traverseVideo('sample-video', 0.31)"><mark id="fortyp">|</mark></td>
+                <td onclick="traverseVideo('sample-video', 0.41)"><mark id="fiftyp">|</mark></td>
+                <td onclick="traverseVideo('sample-video', 0.51)"><mark id="sixtyp">|</mark></td>
+                <td onclick="traverseVideo('sample-video', 0.61)"><mark id="seventyp">|</mark></td>
+                <td onclick="traverseVideo('sample-video', 0.71)"><mark id="eightyp">|</mark></td>
+                <td onclick="traverseVideo('sample-video', 0.81)"><mark id="ninetyp">|</mark></td>
+                <td onclick="traverseVideo('sample-video', 0.91)"><mark id="hundyp">|</mark></td>
+                <td>]</td>
+                <td><time id="vid1Duration">00:00</time></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+      <!-- Lazy loading -->
+      <section id="lazy-loading">
+        <h2>Lazy loading:</h2>
+        <p>Lazy loading has been applied to all images and background images through a custom javascript in order to reduce the initial page load time by rendering images after the rest of the page has been loaded.</p><br>
+        <p>Images are lazy loaded automatically, just include the url in both data for both src- and data-src- attributes. Images set as backgrounds just need an additional class and the data-bg attribute is set to the url.</p><br>
+        <h3>Using the img tag:</h3>
+        <img class="test-img" src="loader.png" data-src="images/Background18.png" alt="sample lazy loaded image">
+        <div class="code-details">
+          <details class="code-sample">
+            <summary>Show me a code sample:</summary>
+            <div class="codewrap">
+              <code>
+                &lt;img src="transparent.png" data-src="image.png"&gt;
+              </code>
+            </div>
+          </details>
+        </div>
+        <h3>Background images:</h3>
+        <div class="test-img lazybg" data-bg="images/Background25.png"></div><br>
+        <div class="code-details">
+          <details class="code-sample">
+            <summary>Show me a code sample:</summary>
+            <div class="codewrap">
+              <code>
+                &lt;div class="lazybg" data-bg="image.png"&gt;&lt;div&gt;
+              </code>
+            </div>
+          </details>
+        </div>
+      </section>
+      <!-- Pop-up modals -->
+      <section id="pop-up-modals">
+        <h2>Pop-up modals:</h2>
+        <button type="button" onclick="showModal('item1')">Show small</button>
+        <button type="button" onclick="showModal('item2')">Show medium</button>
+        <button type="button" onclick="showModal('item3')">Show large</button>
+        <div class="modal" id="item1">
+          <div class="modal-inner sm">
+            This is the small modal. These are best used for short messages or alerts.<br>Click anywhere outside of the modal to close.
+          </div>
+          <div class="overlay" onclick="closeModal('item1')"></div>
+        </div>
+        <div class="modal" id="item2">
+          <div class="modal-inner md">
+            <br><br>This is the medium-sized modal. These are best used for medium-sized messages or alerts containing images.<br>Click anywhere outside of the modal to close.
+          </div>
+          <div class="overlay" onclick="closeModal('item2')"></div>
+        </div>
+        <div class="modal" id="item3">
+          <div class="modal-inner lg">
+            <br><br><br><br><br>
+            This is the largest size modal. These are best used for excerpts from other pages, such as blog articles or product descriptions, which may include image content along with a lot of other details.<br><br>Click anywhere outside of the modal to close.
+          </div>
+          <div class="overlay" onclick="closeModal('item3')"></div>
+        </div>
+        <div class="code-details">
+          <details class="code-sample">
+            <summary>Show me a code sample:</summary>
+            <div class="codewrap">
+              <code>
+                &lt;button type="button" onclick="showModal('itemid')">Show large&lt;/button&gt;<br>
+                &lt;div class="modal" id="itemid"&gt;<br>
+                &nbsp;&lt;div class="modal-inner sm"&gt;This is the&lt;/div&gt;<br>
+                &lt;/div&gt;
+              </code>
+            </div>
+          </details>
+        </div>
+      </section>
+      <!-- Drag & Drop -->
+      <section id="drag-drops">
+        <h2>Drag/drop:</h2>
+        <p>C'mon, you know you wanna try...</p>
+        <div class="dnd" ondrop="dragOff(event)" ondragover="dragOver(event)">
+          <img src="loader.png" data-src="icons/starfish.png" draggable="true" ondragstart="dragOn(event)" id="starfish" class="icon-super" alt="sample icon">
+          <img src="loader.png" data-src="icons/heart.png" draggable="true" ondragstart="dragOn(event)" id="heart" class="icon-super" alt="sample icon">
+          <img src="loader.png" data-src="icons/internet.png" draggable="true" ondragstart="dragOn(event)" id="internet" class="icon-super" alt="sample icon">
+          <img src="loader.png" data-src="icons/mouse_rat.png" draggable="true" ondragstart="dragOn(event)" id="mouse-rat" class="icon-super" alt="sample icon">
+          <img src="loader.png" data-src="icons/save.png" draggable="true" ondragstart="dragOn(event)" id="save" class="icon-super" alt="sample icon">
+        </div>
+        <div class="dnd" ondrop="dragOff(event)" ondragover="dragOver(event)">
+        </div>
+      </section>
+      <section>
+        <h2>????</h2>
+        <p>Next week: Completing the Javascript framework (stay tuned!)</p><br>
+        <p>Concepts include: primitives, operations, experssions, screen output, keyboard input, control statements, object orientation, arrays. functions, constructors, pattern matching, regular experssions, document object model, element access, events, canvas, dom traversal and modification, navigator... ooh wee!</p>
+      </section>
+    </main>
+    <!-- Footer -->
+    <footer>
+      &copy; 2020 Dennis Paul Barden, created for WEB/407 at University of Phoenix
+      <br>
+      Live validation test (Heroku version): <a target="_blank" href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fbsitcapstone.herokuapp.com%2Findex.html">W3 Validator</a>
+      <br>
+      Live performance test (99/100): <a target="_blank" href="https://developers.google.com/speed/pagespeed/insights/?url=https%3A%2F%2Fbsitcapstone.herokuapp.com%2Findex.html">Google PageSpeed Insights</a><br>
+      <!-- Quackers -->
+      <img onclick="showQuack(500, '<p>Quack!</p>')" id="dynast-king" class="dynast-king" src="secret/01.png" alt="duck">
+      <div onclick="quackOn(2000)" id="quackbox" class="quackbox" style="background-image: url(quack.png);" alt="quack"></div>
+      <div onclick="hideSpeech(1000)" id="speech-init" class="speech-bubble" style="background-image: url(speech.png);" alt="speech bubble"></div>
+    </footer>
+    <!-- Functional scripts -->
+    <script src="script.js"></script>
+    <!-- Lazy loading script -->
+    <script id="getLazy">
+      // once the document completes, this script will run
+      window.onload = function() {
+        // locates all images stored within document
+        var images = document.getElementsByTagName('img');
+        // for each image stored in the array
+        for(var n = 0; n < images.length; n++) {
+          // if the image tag contains a data-src attribute
+          if(images[n].hasAttribute('data-src')) {
+            // swap the data stored in src with data stored in data-src
+            images[n].setAttribute('src', images[n].getAttribute('data-src'));
+            // remove the unecessary data-src attribute
+            images[n].removeAttribute('data-src');
+            // since images are hidden by default (to prevent broken images when javascript is disabled), change visibility
+            images[n].style.visibility = 'visible';
+          }
+        }
+        // locates images with background images by targeting the lazybg class
+        var backgrounds = document.getElementsByClassName('lazybg');
+        // for each background element
+        for(var n = 0;n < backgrounds.length; n++) {
+          // add the data stored in data-bg to the background-image style
+          backgrounds[n].style.backgroundImage = "url(" + backgrounds[n].getAttribute('data-bg') + ")";
+          // remove the unecessary data-bg attribute
+          backgrounds[n].removeAttribute('data-bg');
+        }
+        // removes this script as it is not longer needed on the page since images are all loaded
+        var getLost = document.getElementById('getLazy');
+        quack();
+        getLost.parentNode.removeChild(getLost);
+      }
+    </script>
+  </body>
+</html>

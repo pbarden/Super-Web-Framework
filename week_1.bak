@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<!-- week_1.html -->
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Week 1 assignment</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:title" content="Paul's final project">
+    <meta property="og:description" content="Final project for my last class. Updated 1/18 to include UI framework.">
+    <meta property="og:image" content="https://raw.githubusercontent.com/pbarden/BSIT_Capstone/master/capstone.PNG">
+    <meta property="og:url" content="https://bsitcapstone.herokuapp.com/week_1.html">
+  </head>
+  <body> 
+    <header>
+      <nav>
+        <ul>
+          <li><img class="icon" src="icons/starfish.png" alt="sample logo"></li>
+          <li>Paul's Final Project</li>
+          <li><a href="https://bsitcapstone.herokuapp.com/">Home</a></li>
+          <li><a href="http://www.pbarden.io/#Experience">About</a></li>
+          <li><a href="http://www.pbarden.io/#About">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section>
+        <h1>Week 1: Creating an HTML5 Document</h1>
+        <p>This is my week 1 assignment. In case you need to get back, <a target="_blank" href="week_1.html">you can just drag this link into your bookmarks</a>. The sections below include examples of various elements. Most of the front-end framework has style and samples included with a bit of special attention to responsive design. Very heavily inspired by nostalgia.</p>
+        <br>
+        <p>External resources used:</p>
+        <ul>
+          <li>Press Start 2P - Google Fonts (2020). Released under <a target="_blank" href="http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL_web">Open Font license</a>. Reference added to style.css from url: <a target="_blank" href="https://fonts.google.com/specimen/Press+Start+2P">https://fonts.google.com/specimen/Press+Start+2P</a></li>
+          <li>Pixel icons | OpenGameArt.org (2020). Released under <a target="_blank" href="https://creativecommons.org/publicdomain/zero/1.0/">CC0 (Public domain) license</a>. Downloaded from <a target="_blank" href="https://opengameart.org/content/pixel-icons-0">https://opengameart.org/content/pixel-icons-0</a></li>
+        </ul>
+      </section>
+      <section>
+        <h2>Heading 2</h2>
+        <h3>Heading 3</h3>
+        <h4>Heading 4</h4>
+        <h5>Heading 5</h5>
+        <h6>Heading 6</h6>
+        <p>**Please note that &lt;h1&gt; has been omitted from this list since it is included in the section above and will otherwise cause the page to fail validation.</p>
+        <p>Heading 2 is intended to be the top-level heading for each section and styles have been adjusted accordingly.</p>
+      </section>
+      <section>
+        <h2>Text colors:</h2>
+        <p>There are several options for text colors, often used to emphasize errors, warnings, or other types of messages to grab the attention of the user. In order to not rip off naming conventions used in popular frameworks these have unique names.</p>
+        <p>In general, the class names should be set to emphasize meaning, such as 'error', 'inactive' or 'warning'. Since this is for a class project, I decided to use design 'flavors' instead.</p>
+        <p><br>
+          <span class="tomato">"Tomato" (Red text)</span><br>
+          <span class="leaf">"Leaf" (Green text)</span><br>
+          <span class="wheat">"Wheat" (Yellow text)</span><br>
+          <span class="berry">"Berry" (Blue text)</span><br>
+          <span class="stone">"Stone" (Gray text)</span>
+        </p>
+      </section>
+      <section>
+        <h2>Block quote:</h2>
+        <blockquote>
+          " Here's an example block quote. Long quotes can go in places like this, since these are usually citations from other authors/sources, the vertical bar on the left is used to add indentation or call special attention. "
+        </blockquote>
+        <blockquote class="tomato">Alternate color</blockquote>
+        <blockquote class="leaf">Alternate color</blockquote>
+        <blockquote class="wheat">Alternate color</blockquote>
+        <blockquote class="berry">Alternate color</blockquote>
+        <blockquote class="stone">Alternate color</blockquote>
+      </section>
+      <section>
+        <h2>Code snippet:</h2>
+        <div class="codewrap">
+          <code>
+            &lt;a href="somewhere.html"&gt;
+        </code>
+        </div>
+        <p><br>You can also create color-based formatted code snippets, similar to what you'd see in an IDE:</p><br>
+        <div class="codewrap">
+          <code>
+            <span class="stone">&lt;</span><span class="wheat">a</span> <span class="berry">href</span><span class="stone">=</span><span class="tomato">"somewhere.html"</span><span class="stone">&gt;</span>
+          </code>
+        </div>
+      </section>
+      <section>
+        <h2>Input form:</h2>
+        <form>
+            <label>Text input:</label>
+            <input type="text" value="Text input">
+            <label>Tomato text input:</label>
+            <input type="text" value="Text input" class="tomato">
+            <label>Leaf text input:</label>
+            <input type="text" value="Text input" class="leaf">
+            <label>Wheat text input:</label>
+            <input type="text" value="Text input" class="wheat">
+            <label>Berry text input:</label>
+            <input type="text" value="Text input" class="berry">
+            <label>Stone text input:</label>
+            <input type="text" value="Text input" class="stone"><br>
+            <label>Standard button:</label>
+            <input type="button" value="Click me">
+            <label>Tomato button:</label>
+            <input type="button" value="Click me" class="tomato">
+            <label>Leaf button:</label>
+            <input type="button" value="Click me" class="leaf">
+            <label>Wheat button:</label>
+            <input type="button" value="Click me" class="wheat">
+            <label>Berry button:</label>
+            <input type="button" value="Click me" class="berry">
+            <label>Stone button:</label>
+            <input type="button" value="Click me" class="stone"><br>
+            <label>Textarea:</label>
+            <textarea></textarea>
+            <label>Tomato textarea:</label>
+            <textarea class="tomato"></textarea>
+            <label>Leaf textarea:</label>
+            <textarea class="leaf"></textarea>
+            <label>Wheat textarea:</label>
+            <textarea class="wheat"></textarea>
+            <label>Berry textarea:</label>
+            <textarea class="berry"></textarea>
+            <input type="submit" value="Finished!">
+        </form>
+        <div class="dark">
+          <h3>Special dark edition:</h3>
+          <form class="dark">
+              <label>Text:</label>
+              <input type="text" value="Text input" class="dark"><br>
+              <label>Buttons:</label>
+              <input type="button" value="Click me" class="dark"><br>
+          </form>
+        </div>
+      </section>
+      <section>
+        <h2>Selects:</h2>
+        <label>Select with options</label>
+        <select>
+          <option>Option 1</option>
+          <option>Option 2</option>
+          <option>Option 3</option>
+        </select>
+        <select class="tomato">
+          <option>Option 1</option>
+          <option>Option 2</option>
+          <option>Option 3</option>
+        </select>
+        <select class="leaf">
+          <option>Option 1</option>
+          <option>Option 2</option>
+          <option>Option 3</option>
+        </select>
+        <select class="wheat">
+          <option>Option 1</option>
+          <option>Option 2</option>
+          <option>Option 3</option>
+        </select>
+        <select class="berry">
+          <option>Option 1</option>
+          <option>Option 2</option>
+          <option>Option 3</option>
+        </select>
+        <select class="stone">
+          <option>Option 1</option>
+          <option>Option 2</option>
+          <option>Option 3</option>
+        </select>
+      </section>
+      <section>
+        <h2>Lists:</h2>
+        <h3><u>Unordered</u></h3>
+        <ul>
+          <li>Something</li>
+          <li>Something else</li>
+        </ul>
+        <h3><u>Ordered</u></h3>
+        <ol>
+          <li>First</li>
+          <li>Second</li>
+        </ol>
+        <ol type="A">
+          <li>First</li>
+          <li>Second</li>
+        </ol>
+        <ol type="a">
+          <li>First</li>
+          <li>Second</li>
+        </ol>
+        <ol type="I">
+          <li>First</li>
+          <li>Second</li>
+        </ol>
+        <ol type="i">
+          <li>First</li>
+          <li>Second</li>
+        </ol>
+        <h3><u>Descriptions</u></h3>
+        <p>Alternating colors can be used to group together different term categories or types. Try also adding aria-labels to improve accessibility and make sure that color isn't the only thing used to emphasize meaning.</p>
+        <dl>
+          <dt>Term</dt>
+          <dd>brief description</dd>
+          <dt class="tomato">Tomato</dt>
+          <dd>alternate color</dd>
+          <dt class="leaf">Leaf</dt>
+          <dd>alternate color</dd>
+          <dt class="wheat">Wheat</dt>
+          <dd>alternate color</dd>
+          <dt class="berry">Berry</dt>
+          <dd>alternate color</dd>
+          <dt class="stone">Stone</dt>
+          <dd>alternate color</dd>
+        </dl>
+      </section>
+      <section>
+        <h2>Tables:</h2>
+        <table>
+          <caption>This is a caption to explain table data.</caption>
+          <thead>
+            <tr>
+              <th>Col 1</th>
+              <th>Col 2</th>
+              <th>Col 3</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Item</td>
+              <td>Item</td>
+              <td>Item</td>
+            </tr>
+            <tr>
+              <td>Item</td>
+              <td>Item</td>
+              <td>Item</td>
+            </tr>
+            <tr>
+              <td>Item</td>
+              <td>Item</td>
+              <td>Item</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td>Item</td>
+              <td>Item</td>
+              <td>Item</td>
+            </tr>
+          </tfoot>
+        </table>
+        <p><br>Tables can also be styled to match 'flavors' seen in other elements thus far in the theme:<br></p>
+        <table>
+          <caption>*** Alternate colors! ***</caption>
+          <thead>
+            <tr>
+              <th class="tomato">Col 1</th>
+              <th class="leaf">Col 2</th>
+              <th class="wheat">Col 3</th>
+              <th class="berry">Col 4</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Item</td>
+              <td>Item</td>
+              <td>Item</td>
+              <td class="stone">Item</td>
+            </tr>
+            <tr>
+              <td>Item</td>
+              <td>Item</td>
+              <td>Item</td>
+              <td class="stone">Item</td>
+            </tr>
+            <tr>
+              <td>Item</td>
+              <td>Item</td>
+              <td>Item</td>
+              <td class="stone">Item</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td class="tomato">Item</td>
+              <td class="leaf">Item</td>
+              <td class="wheat">Item</td>
+              <td class="berry stone">Item</td>
+            </tr>
+          </tfoot>
+        </table>
+        <div class="dark">
+          <h3>Special dark edition:</h3>
+          <table>
+            <caption>This is the same table style, only darker.</caption>
+            <thead>
+              <tr>
+                <th>Col 1</th>
+                <th>Col 2</th>
+                <th>Col 3</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Item</td>
+                <td>Item</td>
+                <td>Item</td>
+              </tr>
+              <tr>
+                <td>Item</td>
+                <td>Item</td>
+                <td>Item</td>
+              </tr>
+              <tr>
+                <td>Item</td>
+                <td>Item</td>
+                <td>Item</td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <td>Item</td>
+                <td>Item</td>
+                <td>Item</td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+      </section>
+      <section>
+        <h2>Icons:</h2>
+        <p>47 icons included:</p>
+        <img class="icon" src="icons/add_folder.png" alt="sample icon">
+        <img class="icon" src="icons/alert.png" alt="sample icon">
+        <img class="icon" src="icons/alert_alt.png" alt="sample icon">
+        <img class="icon" src="icons/button_alert.png" alt="sample icon">
+        <img class="icon" src="icons/button_error.png" alt="sample icon">
+        <img class="icon" src="icons/chat.png" alt="sample icon">
+        <img class="icon" src="icons/clipboard.png" alt="sample icon">
+        <img class="icon" src="icons/connecting.png" alt="sample icon">
+        <img class="icon" src="icons/connection.png" alt="sample icon">
+        <img class="icon" src="icons/console.png" alt="sample icon">
+        <img class="icon" src="icons/cross.png" alt="sample icon">
+        <img class="icon" src="icons/cursor_select.png" alt="sample icon">
+        <img class="icon" src="icons/database.png" alt="sample icon">
+        <img class="icon" src="icons/delete.png" alt="sample icon">
+        <img class="icon" src="icons/document.png" alt="sample icon">
+        <img class="icon" src="icons/download.png" alt="sample icon">
+        <img class="icon" src="icons/download_alt.png" alt="sample icon">
+        <img class="icon" src="icons/drive.png" alt="sample icon">
+        <img class="icon" src="icons/error.png" alt="sample icon">
+        <img class="icon" src="icons/file.png" alt="sample icon">
+        <img class="icon" src="icons/find.png" alt="sample icon">
+        <img class="icon" src="icons/folder.png" alt="sample icon">
+        <img class="icon" src="icons/folder_alt.png" alt="sample icon">
+        <img class="icon" src="icons/help.png" alt="sample icon">
+        <img class="icon" src="icons/home.png" alt="sample icon">
+        <img class="icon" src="icons/info.png" alt="sample icon">
+        <img class="icon" src="icons/inspect.png" alt="sample icon">
+        <img class="icon" src="icons/internet.png" alt="sample icon">
+        <img class="icon" src="icons/keyboard.png" alt="sample icon">
+        <img class="icon" src="icons/message.png" alt="sample icon">
+        <img class="icon" src="icons/microphone.png" alt="sample icon">
+        <img class="icon" src="icons/monitor.png" alt="sample icon">
+        <img class="icon" src="icons/mouse_rat.png" alt="sample icon">
+        <img class="icon" src="icons/music.png" alt="sample icon">
+        <img class="icon" src="icons/photo.png" alt="sample icon">
+        <img class="icon" src="icons/question.png" alt="sample icon">
+        <img class="icon" src="icons/save.png" alt="sample icon">
+        <img class="icon" src="icons/settings.png" alt="sample icon">
+        <img class="icon" src="icons/target.png" alt="sample icon">
+        <img class="icon" src="icons/tools.png" alt="sample icon">
+        <img class="icon" src="icons/upload.png" alt="sample icon">
+        <img class="icon" src="icons/upload_alt.png" alt="sample icon">
+        <img class="icon" src="icons/waiting.png" alt="sample icon">
+        <img class="icon" src="icons/like.png" alt="sample icon">
+        <img class="icon" src="icons/starfish.png" alt="sample icon">
+        <img class="icon" src="icons/heart.png" alt="sample icon">
+        <img class="icon" src="icons/cursor.png" alt="sample icon">
+        <div class="cutout">
+          <p><span class="tomato">BONUS!</span> Large icons are also available:</p>
+          <h4>*** 64x64 ***</h4>
+          <img class="icon-large" src="icons/add_folder.png" alt="sample icon">
+          <img class="icon-large" src="icons/alert.png" alt="sample icon">
+          <img class="icon-large" src="icons/alert_alt.png" alt="sample icon">
+          <img class="icon-large" src="icons/button_alert.png" alt="sample icon">
+          <img class="icon-large" src="icons/button_error.png" alt="sample icon">
+          <img class="icon-large" src="icons/chat.png" alt="sample icon">
+          <img class="icon-large" src="icons/clipboard.png" alt="sample icon">
+          <img class="icon-large" src="icons/connecting.png" alt="sample icon">
+          <img class="icon-large" src="icons/connection.png" alt="sample icon">
+          <img class="icon-large" src="icons/console.png" alt="sample icon">
+          <img class="icon-large" src="icons/cross.png" alt="sample icon">
+          <img class="icon-large" src="icons/cursor_select.png" alt="sample icon">
+          <img class="icon-large" src="icons/database.png" alt="sample icon">
+          <img class="icon-large" src="icons/delete.png" alt="sample icon">
+          <img class="icon-large" src="icons/document.png" alt="sample icon">
+          <img class="icon-large" src="icons/download.png" alt="sample icon">
+          <img class="icon-large" src="icons/download_alt.png" alt="sample icon">
+          <img class="icon-large" src="icons/drive.png" alt="sample icon">
+          <img class="icon-large" src="icons/error.png" alt="sample icon">
+          <img class="icon-large" src="icons/file.png" alt="sample icon">
+          <img class="icon-large" src="icons/find.png" alt="sample icon">
+          <img class="icon-large" src="icons/folder.png" alt="sample icon">
+          <img class="icon-large" src="icons/folder_alt.png" alt="sample icon">
+          <img class="icon-large" src="icons/help.png" alt="sample icon">
+          <img class="icon-large" src="icons/home.png" alt="sample icon">
+          <img class="icon-large" src="icons/info.png" alt="sample icon">
+          <img class="icon-large" src="icons/inspect.png" alt="sample icon">
+          <img class="icon-large" src="icons/internet.png" alt="sample icon">
+          <img class="icon-large" src="icons/keyboard.png" alt="sample icon">
+          <img class="icon-large" src="icons/message.png" alt="sample icon">
+          <img class="icon-large" src="icons/microphone.png" alt="sample icon">
+          <img class="icon-large" src="icons/monitor.png" alt="sample icon">
+          <img class="icon-large" src="icons/mouse_rat.png" alt="sample icon">
+          <img class="icon-large" src="icons/music.png" alt="sample icon">
+          <img class="icon-large" src="icons/photo.png" alt="sample icon">
+          <img class="icon-large" src="icons/question.png" alt="sample icon">
+          <img class="icon-large" src="icons/save.png" alt="sample icon">
+          <img class="icon-large" src="icons/settings.png" alt="sample icon">
+          <img class="icon-large" src="icons/target.png" alt="sample icon">
+          <img class="icon-large" src="icons/tools.png" alt="sample icon">
+          <img class="icon-large" src="icons/upload.png" alt="sample icon">
+          <img class="icon-large" src="icons/upload_alt.png" alt="sample icon">
+          <img class="icon-large" src="icons/waiting.png" alt="sample icon">
+          <img class="icon-large" src="icons/like.png" alt="sample icon">
+          <img class="icon-large" src="icons/starfish.png" alt="sample icon">
+          <img class="icon-large" src="icons/heart.png" alt="sample icon">
+          <img class="icon-large" src="icons/cursor.png" alt="sample icon">
+          <br><br>
+          <h4>*** 96x96 ***</h4>
+          <img class="icon-super" src="icons/add_folder.png" alt="sample icon">
+          <img class="icon-super" src="icons/alert.png" alt="sample icon">
+          <img class="icon-super" src="icons/alert_alt.png" alt="sample icon">
+          <img class="icon-super" src="icons/button_alert.png" alt="sample icon">
+          <img class="icon-super" src="icons/button_error.png" alt="sample icon">
+          <img class="icon-super" src="icons/chat.png" alt="sample icon">
+          <img class="icon-super" src="icons/clipboard.png" alt="sample icon">
+          <img class="icon-super" src="icons/connecting.png" alt="sample icon">
+          <img class="icon-super" src="icons/connection.png" alt="sample icon">
+          <img class="icon-super" src="icons/console.png" alt="sample icon">
+          <img class="icon-super" src="icons/cross.png" alt="sample icon">
+          <img class="icon-super" src="icons/cursor_select.png" alt="sample icon">
+          <img class="icon-super" src="icons/database.png" alt="sample icon">
+          <img class="icon-super" src="icons/delete.png" alt="sample icon">
+          <img class="icon-super" src="icons/document.png" alt="sample icon">
+          <img class="icon-super" src="icons/download.png" alt="sample icon">
+          <img class="icon-super" src="icons/download_alt.png" alt="sample icon">
+          <img class="icon-super" src="icons/drive.png" alt="sample icon">
+          <img class="icon-super" src="icons/error.png" alt="sample icon">
+          <img class="icon-super" src="icons/file.png" alt="sample icon">
+          <img class="icon-super" src="icons/find.png" alt="sample icon">
+          <img class="icon-super" src="icons/folder.png" alt="sample icon">
+          <img class="icon-super" src="icons/folder_alt.png" alt="sample icon">
+          <img class="icon-super" src="icons/help.png" alt="sample icon">
+          <img class="icon-super" src="icons/home.png" alt="sample icon">
+          <img class="icon-super" src="icons/info.png" alt="sample icon">
+          <img class="icon-super" src="icons/inspect.png" alt="sample icon">
+          <img class="icon-super" src="icons/internet.png" alt="sample icon">
+          <img class="icon-super" src="icons/keyboard.png" alt="sample icon">
+          <img class="icon-super" src="icons/message.png" alt="sample icon">
+          <img class="icon-super" src="icons/microphone.png" alt="sample icon">
+          <img class="icon-super" src="icons/monitor.png" alt="sample icon">
+          <img class="icon-super" src="icons/mouse_rat.png" alt="sample icon">
+          <img class="icon-super" src="icons/music.png" alt="sample icon">
+          <img class="icon-super" src="icons/photo.png" alt="sample icon">
+          <img class="icon-super" src="icons/question.png" alt="sample icon">
+          <img class="icon-super" src="icons/save.png" alt="sample icon">
+          <img class="icon-super" src="icons/settings.png" alt="sample icon">
+          <img class="icon-super" src="icons/target.png" alt="sample icon">
+          <img class="icon-super" src="icons/tools.png" alt="sample icon">
+          <img class="icon-super" src="icons/upload.png" alt="sample icon">
+          <img class="icon-super" src="icons/upload_alt.png" alt="sample icon">
+          <img class="icon-super" src="icons/waiting.png" alt="sample icon">
+          <img class="icon-super" src="icons/like.png" alt="sample icon">
+          <img class="icon-super" src="icons/starfish.png" alt="sample icon">
+          <img class="icon-super" src="icons/heart.png" alt="sample icon">
+          <img class="icon-super" src="icons/cursor.png" alt="sample icon">
+        </div>
+      </section>
+      <section>
+        <h2>Details:</h2>
+        <details open>
+          <summary>Click to view more details:</summary>
+          <p>More details here. This one is expanded when the page is loaded. Please note that the arrows need to be disabled through webkit in order to display correctly in Chrome, the most popular browser family in the world, however this is not allowed in order to pass W3C validation. This has been commented out during this course and will not display properly due to this course restriction.</p>
+        </details>
+        <details>
+          <summary>Click to view more details:</summary>
+          <p>More details here!</p>
+        </details>
+        <details>
+          <summary>Click to view more details:</summary>
+          <p>More details here!</p>
+        </details>
+        <details>
+          <summary>Click to view more details:</summary>
+          <p>More details here!</p>
+        </details>
+      </section>
+      <section class="content">
+        <h2>2-column content:</h2>
+        <div class="two-card">
+          <p>First card content goes here. This is just text but images could also be addded.</p>
+        </div>
+        <div class="two-card tomato">
+          <p>Second card content goes here. This is just text but images could also be addded.</p>
+        </div>
+        <div class="two-card wheat">
+          <p>Third card content goes here. This is just text but images could also be addded.</p>
+        </div>
+        <div class="two-card">
+          <p>Fourth card content goes here. This is just text but images could also be addded.</p>
+        </div>
+      </section>
+      <section class="content">
+        <h2>3-column content:</h2>
+        <div class="three-card leaf">
+          <p>First card content goes here. This is just text but images could also be addded.</p>
+        </div>
+        <div class="three-card">
+          <p>Second card content goes here. This is just text but images could also be addded.</p>
+        </div>
+        <div class="three-card">
+          <p>Third card content goes here. This is just text but images could also be addded.</p>
+        </div>
+        <div class="three-card">
+          <p>Fourth card content goes here. This is just text but images could also be addded.</p>
+        </div>
+        <div class="three-card">
+          <p>Fifth card content goes here. This is just text but images could also be addded.</p>
+        </div>
+        <div class="three-card berry">
+          <p>Sixth card content goes here. This is just text but images could also be addded.</p>
+        </div>
+      </section>
+      <section class="content">
+        <h2>Callouts:</h2>
+        <div class="full-card">
+          <div class="callout">
+            <img class="icon-large" src="icons/message.png" alt="example callout icon">
+          </div>
+          <div class="callout-message">
+            <p>Callout message text goes here. Callouts use a single icon with a text message. The message can be short or lengthy, just try to get the point across.</p>
+          </div>
+        </div>
+        <div class="full-card">
+          <div class="callout">
+            <img class="icon" src="icons/cross.png" alt="example callout icon">
+          </div>
+          <div class="callout-message">
+            <p><span class="tomato">Color can be changed for different messages.</span></p>
+          </div>
+        </div>
+        <div class="full-card">
+          <div class="callout">
+            <img class="icon" src="icons/alert.png" alt="example callout icon">
+          </div>
+          <div class="callout-message">
+            <p><span class="leaf">Color can be changed for different messages.</span></p>
+          </div>
+        </div>
+        <div class="full-card">
+          <div class="callout">
+            <img class="icon" src="icons/alert_alt.png" alt="example callout icon">
+          </div>
+          <div class="callout-message">
+            <p><span class="wheat">Color can be changed for different messages.</span></p>
+          </div>
+        </div>
+        <div class="full-card">
+          <div class="callout">
+            <img class="icon" src="icons/info.png" alt="example callout icon">
+          </div>
+          <div class="callout-message">
+            <p><span class="berry">Color can be changed for different messages.</span></p>
+          </div>
+        </div>
+      </section>
+      <section class="content">
+        <h2>Full card w/ image:</h2>
+        <div class="full-card" style="background: url(https://raw.githubusercontent.com/pbarden/BSIT_Capstone/master/capstone.PNG); min-height: 400px; background-position: right;">
+          <div class="tomato inner">
+            <h3>This card has a heading.</h3>
+            <p>And some type of text. All of this text goes over a background image.</p>
+          </div>
+        </div>
+        <div class="full-card">
+          <div class="card hero-image" style="background: url(top.png);background-size: cover; background-position: center;"></div>
+          <div class="card content">
+            <h3>Heading</h3>
+            <p>... and some card text, too. Cards use a single image either on the left or right with a text message. The message can be short or lengthy, just try to get the point across. You might put something like a blog excerpt or a brief product description here.<br><br>Cards are fun.</p>
+          </div>
+        </div>
+        <div class="full-card">
+          <div class="card content">
+            <h3>Heading</h3>
+            <p>... and some card text, too. Cards use a single image either on the left or right with a text message. The message can be short or lengthy, just try to get the point across. You might put something like a blog excerpt or a brief product description here.<br><br>Cards are fun.</p>
+          </div>
+          <div class="card hero-image" style="background: url(hero-2.png); background-size: cover; background-position: center;"></div>
+        </div>
+        <div class="dual-card">
+          <div class="card content-left hero-bg" style="background: url(top.png);background-size: cover; background-position: center;"></div>
+          <div class="card content-right">
+            <h3>Heading</h3>
+            <p>... and some card text, too. Cards use a single image either on the left or right with a text message. The message can be short or lengthy, just try to get the point across. You might put something like a blog excerpt or a brief product description here.<br><br>Cards are fun.</p>
+          </div>
+        </div>
+        <div class="dual-card">
+          <div class="card content-left">
+            <h3>Heading</h3>
+            <p>... and some card text, too. Cards use a single image either on the left or right with a text message. The message can be short or lengthy, just try to get the point across. You might put something like a blog excerpt or a brief product description here.<br><br>Cards are fun.</p>
+          </div>
+          <div class="card content-right hero-bg" style="background: url(hero-2.png); background-size: cover; background-position: center;"></div>
+        </div>
+        <p>Also available in other colors:</p>
+        <div class="dual-card dark-blue">
+          <div class="card content-left hero-bg" style="background: url(top.png);background-size: cover; background-position: center;"></div>
+          <div class="card content-right">
+            <h3>Heading</h3>
+            <p>... and some card text, too. Cards use a single image either on the left or right with a text message. The message can be short or lengthy, just try to get the point across. You might put something like a blog excerpt or a brief product description here.<br><br>Cards are fun.</p>
+          </div>
+        </div>
+        <div class="dual-card dark-black">
+          <div class="card content-left">
+            <h3>Heading</h3>
+            <p>... and some card text, too. Cards use a single image either on the left or right with a text message. The message can be short or lengthy, just try to get the point across. You might put something like a blog excerpt or a brief product description here.<br><br>Cards are fun.</p>
+          </div>
+          <div class="card content-right hero-bg" style="background: url(hero-2.png); background-size: cover; background-position: center;"></div>
+        </div>
+        <div class="full-card dark-blue">
+          <div class="card hero-image" style="background: url(top.png);background-size: cover; background-position: center;"></div>
+          <div class="card content">
+            <h3>Heading</h3>
+            <p>... and some card text, too. Cards use a single image either on the left or right with a text message. The message can be short or lengthy, just try to get the point across. You might put something like a blog excerpt or a brief product description here.<br><br>Cards are fun.</p>
+          </div>
+        </div>
+        <div class="full-card dark-black">
+          <div class="card content">
+            <h3>Heading</h3>
+            <p>... and some card text, too. Cards use a single image either on the left or right with a text message. The message can be short or lengthy, just try to get the point across. You might put something like a blog excerpt or a brief product description here.<br><br>Cards are fun.</p>
+          </div>
+          <div class="card hero-image" style="background: url(hero-2.png); background-size: cover; background-position: center;"></div>
+        </div>
+      </section>
+      <section>
+        <h2>????</h2>
+        <p>Next week: Adding video elements</p>
+      </section>
+    </main>
+    <footer>
+      &copy; 2020 Dennis Paul Barden, created for WEB/407 at University of Phoenix
+      <br>
+      Live validation test (Heroku version): <a target="_blank" href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fbsitcapstone.herokuapp.com%2Findex.html">W3 Validator</a>
+      <br>
+      Live performance test (99/100): <a target="_blank" href="https://developers.google.com/speed/pagespeed/insights/?url=https%3A%2F%2Fbsitcapstone.herokuapp.com%2Findex.html">Google PageSpeed Insights</a>
+    </footer>
+  </body>
+</html>
