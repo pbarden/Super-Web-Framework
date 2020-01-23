@@ -564,7 +564,7 @@ function quack(n) {
       document.getElementById("dynast-king").style.visibility="visible";
     }, n);
   showQuack(1000, "<p>Quack?</p>");
-  //changeSprite();
+  changeSprite();
 }
 
 function showQuack(n, message) {
