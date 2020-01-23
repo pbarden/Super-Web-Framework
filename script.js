@@ -13,7 +13,10 @@ function showDuration(videoId) {
 // function to initiate video playback
 function play(videoId) { 
     document.getElementById(videoId).play();
-    showDuration(videoId);
+    setTimeout(
+      function() {
+        showDuration(videoId);
+      }, 500);
 }
 
 // function to pause video playback
