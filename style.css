@@ -188,7 +188,7 @@ textarea.berry {
 div {
     padding: 10px;
 }
-div.audio-container, div.video-container {
+div.audio-container, div.video-container, div.full-card {
     overflow: hidden;
 }
 div.dark {
