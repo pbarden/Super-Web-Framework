@@ -127,8 +127,7 @@ section {
     border-style: solid;
     box-shadow: inset -4px -4px #d3d3d3;
     display: block;
-    overflow-wrap: break-word;
-    overflow: hidden;
+    overflow-wrap: break-word;    
 }
 span.tomato {
     color: #e76e55;
@@ -188,6 +187,7 @@ textarea.berry {
 }
 div {
     padding: 10px;
+    overflow: hidden;
 }
 div.dark {
     background-color: #2d2930;
