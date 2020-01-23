@@ -528,26 +528,6 @@ function audioControl() {
 }
 
 var duckWasInitialized = false;
-var headingsMsg = "<p>This section is about headings. Nothing super fancy going on here, but they're useful. Heading lv. 2 should go on the top of each section.</p>";
-var textColorsMsg = "<p>Every website needs a little flavor, am I right? This section goes over all the different text colors baked into the theme elements - yum!</p>";
-var blockquotesMsg = "<p>Quotes are usually pretty inspirational, so blockquotes also include additional colors to make like cheese and help them really stand alone.</p>";
-var codeSnippetsMsg = "<p>Coding is fun! Am I a nerd for saying that? If you're using this framework, these will shed some light on how you can create a similar element for any of your pages.</p>";
-var inputFormsMsg = "<p>Oh, this part's good.<br><br>Everyone loves to give their input, so forms are a good place to start. Buttons and text fields included, more to come.</p>";
-var selectsMsg = "<p>Quack?</p>";
-var listsMsg = "<p></p>";
-var tablesMsg = "<p></p>";
-var iconsMsg = "<p></p>";
-var detailsMsg = "<p></p>";
-var twoColMsg = "<p></p>";
-var threeColMsg = "<p></p>";
-var calloutsMsg = "<p></p>";
-var cardExsMsg = "<p></p>";
-var audioVideoMsg = "<p></p>";
-var lazyLoadMsg = "<p></p>";
-var modalsMsg = "<p></p>";
-var dragDropsMsg = "<p></p>";
-var quackersMsg = "<p></p>";
-var tooltipMsg = "";
 
 // animate duck
 function startAnimation() {
@@ -579,7 +559,7 @@ function showQuack(n, message) {
     }
   }
 }
-  
+
 function hideQuack(n) {
   setTimeout(
     function() {
@@ -591,35 +571,9 @@ function hideQuack(n) {
     }, n);
 }
 
-function showSpeech(n, message) {
-  setTimeout(
-    function() {
-      document.getElementById("speech-init").style.visibility="visible";
-    }, n);
-    document.getElementById("speech-init").innerHTML = message;
-    hideSpeech(n*10)
-}
-
-function hideSpeech(n) {
-  setTimeout(
-    function() {
-      document.getElementById("speech-init").style.visibility="hidden";
-    }, n);
-  setTimeout(
-    function() {
-      document.getElementById("speech-init").innerHTML = "";
-    }, n);
-}
-
 function quackOn() {
   document.getElementById("quackbox").innerHTML = '<img class="icon-large" src="icons/heart.png" alt="sample icon" style="visibility: visible;">';
   hideQuack(1500);
-  if (!duckWasInitialized) {
-    showSpeech(2500, "<p>Hi, I'm Quackers, I'll be showing you around. I'm not a robot and I'm not collecting any data or personal information. Tap anywhere on my messages to dismiss them.</p>");
-  }
-  if (!duckWasInitialized) {
-    duckWasInitialized = true;
-  }
 }
 
 var frameChanges = 0;

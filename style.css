@@ -880,32 +880,3 @@ img[draggable="true"] {
 .quackbox > p {
     padding-top: 12px;
 }
-.speech-bubble {
-    position: fixed;
-    bottom: 30%;
-    right: 4%;
-    z-index: 12;
-    visibility: hidden;
-    height: 180px;
-    width: 320px;
-    background-size: cover;
-    color: #2d2930;
-}
-@media (min-width: 740px) {
-    .speech-bubble {
-        right: 20%;
-        bottom: 25%;
-    }
-}
-@media (min-width: 1000px) {
-    .speech-bubble {
-        right: 10%;
-        bottom: 18%;
-    }
-}
-.speech-bubble > p {
-    padding-top: 12px;
-    padding-left: 4px;
-    font-size: 12px;
-    text-align: left;
-}
