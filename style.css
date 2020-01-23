@@ -856,7 +856,7 @@ img[draggable="true"] {
 }
 .quackbox {
     position: fixed;
-    bottom: 18%;
+    bottom: 25%;
     right: 25%;
     z-index: 99;
     visibility: hidden;
@@ -880,8 +880,8 @@ img[draggable="true"] {
 }
 .speech-bubble {
     position: fixed;
-    bottom: 20%;
-    right: 20%;
+    bottom: 30%;
+    right: 15%;
     z-index: 12;
     visibility: hidden;
     height: 180px;
