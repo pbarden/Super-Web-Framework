@@ -867,12 +867,14 @@ img[draggable="true"] {
 }
 @media (min-width: 740px) {
     .quackbox {
-        right: 20%;
+        right: 18%;
+        bottom: 20%;
     }
 }
 @media (min-width: 1000px) {
     .quackbox {
         right: 12%;
+        bottom: 18%;
     }
 }
 .quackbox > p {
@@ -881,7 +883,7 @@ img[draggable="true"] {
 .speech-bubble {
     position: fixed;
     bottom: 30%;
-    right: 5%;
+    right: 8%;
     z-index: 12;
     visibility: hidden;
     height: 180px;
@@ -892,11 +894,13 @@ img[draggable="true"] {
 @media (min-width: 740px) {
     .speech-bubble {
         right: 20%;
+        bottom: 25%;
     }
 }
 @media (min-width: 1000px) {
     .speech-bubble {
-        right: 12%;
+        right: 10%;
+        bottom: 18%;
     }
 }
 .speech-bubble > p {
