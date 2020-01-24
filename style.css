@@ -840,6 +840,18 @@ div.test-img {
 #tenp, #twentyp, #thirtyp, #fortyp, #fiftyp, #sixtyp, #seventyp, #eightyp, #ninetyp, #hundyp {
     color: #2d2930;
 }
+@media (max-width: 530px) {
+    #twentyp, #twentyp-tr, #fortyp, #fortyp-tr, #sixtyp, #sixtyp-tr, #eightyp, #eightyp-tr, #hundyp, #hundyp-tr {
+        display: none;
+    }
+    time {
+        font-size: x-small;
+    }
+    #play-button, #pause-button {
+        max-height: 12px;
+        max-width: 12px;
+    }
+}
 mark {
     background-color: #2d2930;
     color: #2d2930;
