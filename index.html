@@ -17,7 +17,7 @@
       <nav>
         <ul>
           <li><img class="logo icon" src="icons/starfish.png" alt="sample logo"></li>
-          <li>Paul's Final Project</li>
+          <li><h1>Super Web Framework</h1></li>
           <li><a href="https://test-bsit.herokuapp.com/">Home</a></li>
           <li><a href="http://www.pbarden.io/#About">About</a></li>
         </ul>
@@ -27,7 +27,7 @@
     <main>
       <!-- About + Contents -->
       <section>
-        <h1>Week 2: Adding HTML5 Video and other media</h1>
+        <h2>Week 2: Adding HTML5 Video and other media</h2>
         <p>This is my week 2 assignment update. In case you need to get back, <a target="_blank" href="index.html">you can just drag this link into your bookmarks</a>. The sections below include examples of various elements. Most of the front-end framework has style and samples included with a bit of special attention to responsive design. Very heavily inspired by nostalgia.</p>
         <br>
         <h3>Contents:</h3>
@@ -193,47 +193,47 @@
       <section id="input-forms">
         <h2>Input form:</h2>
         <form>
-            <label>Text input:</label>
-            <input type="text" value="Text input">
-            <label>Tomato text input:</label>
-            <input type="text" value="Text input" class="tomato">
-            <label>Leaf text input:</label>
-            <input type="text" value="Text input" class="leaf">
-            <label>Wheat text input:</label>
-            <input type="text" value="Text input" class="wheat">
-            <label>Berry text input:</label>
-            <input type="text" value="Text input" class="berry">
-            <label>Stone text input:</label>
-            <input type="text" value="Text input" class="stone"><br>
-            <label>Standard button:</label>
-            <input type="button" value="Click me">
-            <label>Tomato button:</label>
-            <input type="button" value="Click me" class="tomato">
-            <label>Leaf button:</label>
-            <input type="button" value="Click me" class="leaf">
-            <label>Wheat button:</label>
-            <input type="button" value="Click me" class="wheat">
-            <label>Berry button:</label>
-            <input type="button" value="Click me" class="berry">
-            <label>Stone button:</label>
-            <input type="button" value="Click me" class="stone"><br>
-            <label>Textarea:</label>
-            <textarea></textarea>
-            <label>Tomato textarea:</label>
-            <textarea class="tomato"></textarea>
-            <label>Leaf textarea:</label>
-            <textarea class="leaf"></textarea>
-            <label>Wheat textarea:</label>
-            <textarea class="wheat"></textarea>
-            <label>Berry textarea:</label>
-            <textarea class="berry"></textarea>
+            <label for="text-input">Text input:</label>
+            <input id="text-input" type="text" value="Text input">
+            <label for="tomato-text-input">Tomato text input:</label>
+            <input id="tomato-text-input" type="text" value="Text input" class="tomato">
+            <label for="leaf-text-input">Leaf text input:</label>
+            <input id="leaf-text-input" type="text" value="Text input" class="leaf">
+            <label for="wheat-text-input">Wheat text input:</label>
+            <input id="wheat-text-input" type="text" value="Text input" class="wheat">
+            <label for="berry-text-input">Berry text input:</label>
+            <input id="berry-text-input" type="text" value="Text input" class="berry">
+            <label for="stone-text-input">Stone text input:</label>
+            <input id="stone-text-input" type="text" value="Text input" class="stone"><br>
+            <label for="standard-button">Standard button:</label>
+            <input id="standard-button" type="button" value="Click me">
+            <label for="tomato-button">Tomato button:</label>
+            <input id="tomato-button" type="button" value="Click me" class="tomato">
+            <label for="leaf-button">Leaf button:</label>
+            <input id="leaf-button" type="button" value="Click me" class="leaf">
+            <label for="wheat-button">Wheat button:</label>
+            <input id="wheat-button" type="button" value="Click me" class="wheat">
+            <label for="berry-button">Berry button:</label>
+            <input id="berry-button" type="button" value="Click me" class="berry">
+            <label for="stone-button">Stone button:</label>
+            <input id="stone-button" type="button" value="Click me" class="stone"><br>
+            <label for="textarea-sample">Textarea:</label>
+            <textarea id="textarea-sample"></textarea>
+            <label for="tomato-textarea-sample">Tomato textarea:</label>
+            <textarea id="tomato-textarea-sample" class="tomato"></textarea>
+            <label for="leaf-textarea-sample">Leaf textarea:</label>
+            <textarea id="leaf-textarea-sample" class="leaf"></textarea>
+            <label for="wheat-textarea-sample">Wheat textarea:</label>
+            <textarea id="wheat-textarea-sample" class="wheat"></textarea>
+            <label for="berry-textarea-sample">Berry textarea:</label>
+            <textarea id="berry-textarea-sample" class="berry"></textarea>
             <input type="submit" value="Finished!">
         </form>
         <div class="dark">
           <h3>Special dark edition:</h3>
           <form class="dark">
-            <label>Text:</label>
-            <input type="text" value="Text input" class="dark"><br>
+            <label for="dark-text-input">Text:</label>
+            <input id="dark-text-input" type="text" value="Text input" class="dark"><br>
             <label>Buttons:</label>
             <input type="button" value="Click me" class="dark"><br>
           </form>
@@ -241,8 +241,8 @@
         <div class="dark-blue">
           <h3>Special blue edition:</h3>
           <form class="dark-blue">
-            <label>Text:</label>
-            <input type="text" value="Text input" class="dark"><br>
+            <label for="d-blue-text-input">Text:</label>
+            <input id="d-blue-text-input" type="text" value="Text input" class="dark"><br>
             <label>Buttons:</label>
             <input type="button" value="Click me" class="dark"><br>
           </form>
@@ -261,33 +261,38 @@
       <!-- Selects -->
       <section id="selects">
         <h2>Selects:</h2>
-        <label>Select with options</label>
-        <select>
+        <label for="select-sample">Select with options</label>
+        <select id="select-sample">
           <option>Option 1</option>
           <option>Option 2</option>
           <option>Option 3</option>
         </select>
-        <select class="tomato">
+        <label for="tomato-select-sample">Select with options</label>
+        <select id="tomato-select-sample" class="tomato">
           <option>Option 1</option>
           <option>Option 2</option>
           <option>Option 3</option>
         </select>
-        <select class="leaf">
+        <label for="leaf-select-sample">Select with options</label>
+        <select id="leaf-select-sample" class="leaf">
           <option>Option 1</option>
           <option>Option 2</option>
           <option>Option 3</option>
         </select>
-        <select class="wheat">
+        <label for="wheat-select-sample">Select with options</label>
+        <select id="wheat-select-sample" class="wheat">
           <option>Option 1</option>
           <option>Option 2</option>
           <option>Option 3</option>
         </select>
-        <select class="berry">
+        <label for="berry-select-sample">Select with options</label>
+        <select id="berry-select-sample" class="berry">
           <option>Option 1</option>
           <option>Option 2</option>
           <option>Option 3</option>
         </select>
-        <select class="stone">
+        <label for="stone-select-sample">Select with options</label>
+        <select id="stone-select-sample" class="stone">
           <option>Option 1</option>
           <option>Option 2</option>
           <option>Option 3</option>
@@ -446,7 +451,7 @@
           </tfoot>
         </table>
         <div class="dark">
-          <h3>Special dark edition:</h3>
+          <p><span class="tomato" style="font-size: 28px;">Special dark edition:</span></p>
           <table>
             <caption>This is the same table style, only darker.</caption>
             <thead>
@@ -673,7 +678,7 @@
         <h2>Details:</h2>
         <details open>
           <summary>Click to view more details:</summary>
-          <p>More details here. This one is expanded when the page is loaded. Please note that the arrows need to be disabled through webkit in order to display correctly in Chrome, the most popular browser family in the world, however this is not allowed in order to pass W3C validation. This has been commented out during this course and will not display properly due to this course restriction.</p>
+          <p>More details here. This one is expanded when the page is loaded.</p>
         </details>
         <details>
           <summary>Click to view more details:</summary>
@@ -959,7 +964,7 @@
             document.getElementById("sample-audio").ontimeupdate = function() {audioControl()};
           </script>
           <table class="audio-controls">
-            <caption>Featuring the smooth, lo-fi sounds of "Samurai Champloo Insipired Loop," performed by omfgdude.</caption>
+            <!--<caption>Featuring the smooth, lo-fi sounds of "Samurai Champloo Insipired Loop," performed by omfgdude.</caption>-->
             <tbody>
               <tr class="audio-track-container">
                 <td style="max-width: 40px; text-align: right;"><img class="icon" id="play-button" src="loader.png" data-src="icons/play.png" alt="sample icon" onclick="playTrack('sample-audio')"></td>
@@ -991,7 +996,7 @@
             document.getElementById("sample-video").ontimeupdate = function() {videoControl()};
           </script>
           <table class="video-controls">
-            <caption>Featuring "Torpedo Rendezvous", the first chapter in the saga of Secret Agent X-9 in the 1945 serial by Universal Pictures.</caption>
+            <!--<caption>Featuring "Torpedo Rendezvous", the first chapter in the saga of Secret Agent X-9 in the 1945 serial by Universal Pictures.</caption>-->
             <tbody>
               <tr>
                 <td style="max-width: 40px; text-align: right;"><img class="icon" id="play-vid-button" src="loader.png" data-src="icons/play.png" alt="sample icon" onclick="play('sample-video')"></td>
