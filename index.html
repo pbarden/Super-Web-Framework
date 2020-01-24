@@ -1110,7 +1110,7 @@
       Live performance test (98/100): <a target="_blank" href="https://developers.google.com/speed/pagespeed/insights/?url=https%3A%2F%2Ftest-bsit.herokuapp.com%2Findex.html&tab=mobile">Google PageSpeed Insights</a><br>
       <!-- Quackers -->
       <img onclick="showQuack(500, '<p>Quack!</p>')" id="dynast-king" class="dynast-king" src="secret/01.png" alt="duck">
-      <div onclick="quackOn(2000)" id="quackbox" class="quackbox" style="background-image: url(quack.png);"></div>
+      <div onclick="quackOn(750)" id="quackbox" class="quackbox" style="background-image: url(quack.png);"></div>
     </footer>
     <!-- Functional scripts -->
     <script src="script.js"></script>
@@ -1143,7 +1143,7 @@
         }
         // removes this script as it is not longer needed on the page since images are all loaded
         var getLost = document.getElementById('getLazy');
-        quack();
+        quack(1000);
         getLost.parentNode.removeChild(getLost);
       }
     </script>

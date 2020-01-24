@@ -530,8 +530,6 @@ function audioControl() {
     }
 }
 
-var duckWasInitialized = false;
-
 // animate duck
 function startAnimation() {
   setInterval(
@@ -546,7 +544,7 @@ function quack(n) {
     function() {
       document.getElementById("dynast-king").style.visibility="visible";
     }, n);
-  showQuack(1000, "<p>Quack?</p>");
+  showQuack(n, "<p>Quack?</p>");
   changeSprite();
 }
 
@@ -557,10 +555,8 @@ function showQuack(n, message) {
       document.getElementById("quackbox").style.visibility="visible";
     }, n);
     document.getElementById("quackbox").innerHTML = message;
-    if(duckWasInitialized) {
-      hideQuack(n*8);
-    }
   }
+  hideQuack(n*8);
 }
 
 function hideQuack(n) {
