@@ -16,7 +16,7 @@ function play(videoId) {
     setTimeout(
       function() {
         showDuration(videoId);
-      }, 500);
+      }, 1000);
 }
 
 // function to pause video playback
@@ -44,7 +44,10 @@ function showTrackDuration(audioId) {
 // function to initiate audio playback
 function playTrack(audioId) { 
     document.getElementById(audioId).play();
-    showTrackDuration(audioId);
+    setTimeout(
+      function() {
+        showDuration(audioId);
+      }, 1000);
 }
 
 // function to pause audio playback
