@@ -5,8 +5,8 @@ function showDuration(videoId) {
         oO = "0";
     }
     var dur = document.getElementById(videoId).duration;
-    var mins = Math.trunc(dur / 60);
-    var secs = Math.trunc(dur % 60);
+    var mins = Math.floor(dur / 60);
+    var secs = Math.floor(dur % 60);
     document.getElementById("vid1Duration").innerHTML = mins + ":" + oO + secs;
 }
 
@@ -36,8 +36,8 @@ function showTrackDuration(audioId) {
         oO = "0";
     }
     var dur = document.getElementById(audioId).duration;
-    var mins = Math.trunc(dur / 60);
-    var secs = Math.trunc(dur % 60);
+    var mins = Math.floor(dur / 60);
+    var secs = Math.floor(dur % 60);
     document.getElementById("track1Duration").innerHTML = mins + ":" + oO + secs;
 }
 
@@ -99,7 +99,7 @@ function videoControl() {
     if((document.getElementById("sample-video").currentTime % 60) < 10) {
         oO = "0";
     }
-    document.getElementById("vid1Position").innerHTML = Math.trunc(document.getElementById("sample-video").currentTime / 60) + ":" + oO + Math.trunc(document.getElementById("sample-video").currentTime % 60);
+    document.getElementById("vid1Position").innerHTML = Math.floor(document.getElementById("sample-video").currentTime / 60) + ":" + oO + Math.floor(document.getElementById("sample-video").currentTime % 60);
     if(document.getElementById("sample-video").currentTime < (document.getElementById("sample-video").duration * .1)) {
       document.getElementById("tenp").style.color="#e76e55";
       document.getElementById("twentyp").style.color="#d3d3d3";
@@ -319,7 +319,7 @@ function audioControl() {
     if((document.getElementById("sample-audio").currentTime % 60) < 10) {
         oO = "0";
     }
-    document.getElementById("track1Position").innerHTML = Math.trunc(document.getElementById("sample-audio").currentTime / 60) + ":" + oO + Math.trunc(document.getElementById("sample-audio").currentTime % 60);
+    document.getElementById("track1Position").innerHTML = Math.floor(document.getElementById("sample-audio").currentTime / 60) + ":" + oO + Math.floor(document.getElementById("sample-audio").currentTime % 60);
     if(document.getElementById("sample-audio").currentTime < (document.getElementById("sample-audio").duration * .1)) {
       document.getElementById("tenp-tr").style.color="#e76e55";
       document.getElementById("twentyp-tr").style.color="#d3d3d3";
