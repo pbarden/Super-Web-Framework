@@ -156,6 +156,7 @@ button, input[type="text"], input[type="button"] {
     padding: 5px 10px;
     border-width: 4px;
     border-style: solid;
+    border-radius: 0%;
     line-height: inherit;
     box-sizing: border-box;
     font-family: 'Press Start 2P', cursive;
@@ -847,7 +848,7 @@ div.test-img {
     time {
         font-size: x-small;
     }
-    #play-button, #pause-button {
+    #play-button, #pause-button, #play-vid-button, #pause-vid-button {
         max-height: 12px;
         max-width: 12px;
     }
