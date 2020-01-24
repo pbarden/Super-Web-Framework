@@ -46,7 +46,7 @@ function playTrack(audioId) {
     document.getElementById(audioId).play();
     setTimeout(
       function() {
-        showDuration(audioId);
+        showTrackDuration(audioId);
       }, 1000);
 }
 
