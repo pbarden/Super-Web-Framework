@@ -547,7 +547,7 @@ function quack(n) {
     function() {
       document.getElementById("dynast-king").style.visibility="visible";
     }, n);
-  showQuack(n, "<p>Quack?</p>");
+  showQuack(n*2, "<p>Quack?</p>");
   changeSprite();
 }
 
@@ -598,4 +598,3 @@ function changeSprite() {
       }
     }, 500);
 }
-

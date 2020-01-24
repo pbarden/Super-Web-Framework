@@ -1128,7 +1128,7 @@
             images[n].setAttribute('src', images[n].getAttribute('data-src'));
             // remove the unecessary data-src attribute
             images[n].removeAttribute('data-src');
-            // since images are hidden by default (to prevent broken images when javascript is disabled), change visibility
+            // unveil lazy loaded images since images are hidden by default (to prevent broken images when javascript is disabled)
             images[n].style.visibility = 'visible';
           }
         }

@@ -880,8 +880,8 @@ img[draggable="true"] {
     right: 25%;
     z-index: 99;
     visibility: hidden;
-    height: 80px;
-    width: 150px;
+    height: 84px;
+    width: 158px;
     background-size: cover;
     color: #2d2930;
 }
@@ -896,6 +896,9 @@ img[draggable="true"] {
         right: 12%;
         bottom: 18%;
     }
+}
+.quackbox > img {
+    margin-top: -4px;
 }
 .quackbox > p {
     padding-top: 8px;
