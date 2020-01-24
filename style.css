@@ -865,8 +865,14 @@ img[draggable="true"] {
     right: 5%;
     z-index: 11;
     visibility: hidden;
-    height: 120px;
-    width: 120px;
+    height: 90px;
+    width: 90px;
+}
+@media(min-width: 1000px) {
+    .dynast-king {
+        height: 120px;
+        width: 120px;
+    }
 }
 .quackbox {
     position: fixed;
