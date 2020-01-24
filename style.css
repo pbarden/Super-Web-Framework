@@ -38,7 +38,7 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 10px;
 }
 h1 {
-    font-size: 36px;
+    font-size: 14px;
 }
 h2 {
     font-size: 32px;
@@ -484,10 +484,9 @@ summary {
     color: #209cee;
     list-style: none;
 }
-/* Required for Chrome browsers, restore after project:
 summary::-webkit-details-marker {
     display: none;
-}*/
+}
 summary:after {
     content: "+";
     float: left;
