@@ -18,7 +18,7 @@
         <ul>
           <li><img class="logo icon" src="icons/starfish.png" alt="sample logo"></li>
           <li><h1>Super Web Framework</h1></li>
-          <li><a href="https://test-bsit.herokuapp.com/">Home</a></li>
+          <li><a href="index.html">Home</a></li>
           <li><a href="http://www.pbarden.io/#About">About</a></li>
         </ul>
       </nav>
@@ -27,7 +27,7 @@
     <main>
       <!-- About + Contents -->
       <section>
-        <h2>Week 2: Adding HTML5 Video and other media</h2>
+        <h2>Super Web Framework</h2>
         <p>This is my week 2 assignment update. In case you need to get back, <a target="_blank" href="index.html">you can just drag this link into your bookmarks</a>. The sections below include examples of various elements. Most of the front-end framework has style and samples included with a bit of special attention to responsive design. Very heavily inspired by nostalgia.</p>
         <br>
         <h3>Contents:</h3>
@@ -50,14 +50,26 @@
             <li><a href="#card-examples">Card examples</a></li>
           </ul>
         </details>
-        <details open>
+        <details>
           <summary>Week 2</summary>
           <ul class="toc">
             <li><a href="#audio-videos">Audio/Video</a></li>
+          </ul>
+        </details>
+        <details>
+          <summary>Week 3</summary>
+          <ul class="toc">
+            <li>Alternate audio/video controls</li>
             <li><a href="#lazy-loading">Lazy loading</a></li>
             <li><a href="#pop-up-modals">Pop-up modals</a></li>
             <li><a href="#drag-drops">Drag/Drop</a></li>
             <li>Quackers (you'll see)</li>
+          </ul>
+        </details>
+        <details open>
+          <summary>Week 4</summary>
+          <ul class="toc">
+            <li><a href="#local-storage">Local storage</a></li>
           </ul>
         </details>
         <br>
@@ -72,7 +84,7 @@
           <li>Universal Studios. (1945). Secret Agent x-9: Chapter 1 - Torpedo Rendezvous : Morgan Cox : Free Download, Borrow, and Streaming : Internet Archive. Acceptable usage under <a href="https://creativecommons.org/licenses/by/3.0/">CC-BY 3.0 - Attribution</a>. Reference added from <a href="https://archive.org/details/secret_agent_x_9_ep1">https://archive.org/details/secret_agent_x_9_ep1</a></li>
           <li>kotnaszynce. (2019). cute duck animated set | OpenGameArt.org. Released under <a target="_blank" href="https://creativecommons.org/publicdomain/zero/1.0/">CC0 (Public domain) license</a>. Downloaded from <a href="https://opengameart.org/content/cute-duck-animated-set">https://opengameart.org/content/cute-duck-animated-set</a></li>
         </ul>
-        <!-- Last updated: 1/23/2020 -->
+        <!-- Last updated: 1/23/2020 
         <h4>Changelog:</h4>
         <h5>Week 1:</h5>
         <ul>
@@ -91,7 +103,7 @@
           <li>Added modals in multiple sizes</li>
           <li>Created drag/drop elements (Drag and Drop API)</li>
           <li>Updated documentation for additional components</li>
-        </ul>
+        </ul>-->
         <br>
       </section>
       <!-- Headings -->
@@ -1091,19 +1103,38 @@
         <h2>Drag/drop:</h2>
         <p>C'mon, you know you wanna try... (P.S. Desktop only)</p>
         <div class="dnd" ondrop="dragOff(event)" ondragover="dragOver(event)">
-          <img src="loader.png" data-src="icons/starfish.png" draggable="true" ondragstart="dragOn(event)" id="starfish" class="icon-super" alt="sample icon">
-          <img src="loader.png" data-src="icons/heart.png" draggable="true" ondragstart="dragOn(event)" id="heart" class="icon-super" alt="sample icon">
-          <img src="loader.png" data-src="icons/internet.png" draggable="true" ondragstart="dragOn(event)" id="internet" class="icon-super" alt="sample icon">
-          <img src="loader.png" data-src="icons/mouse_rat.png" draggable="true" ondragstart="dragOn(event)" id="mouse-rat" class="icon-super" alt="sample icon">
-          <img src="loader.png" data-src="icons/save.png" draggable="true" ondragstart="dragOn(event)" id="save" class="icon-super" alt="sample icon">
+          <img src="loader.png" data-src="icons/starfish.png" draggable="true" ondragstart="dragOn(event)" id="drag-starfish" class="icon-super" alt="sample icon">
+          <img src="loader.png" data-src="icons/heart.png" draggable="true" ondragstart="dragOn(event)" id="drag-heart" class="icon-super" alt="sample icon">
+          <img src="loader.png" data-src="icons/internet.png" draggable="true" ondragstart="dragOn(event)" id="drag-internet" class="icon-super" alt="sample icon">
+          <img src="loader.png" data-src="icons/mouse_rat.png" draggable="true" ondragstart="dragOn(event)" id="drag-mouse-rat" class="icon-super" alt="sample icon">
+          <img src="loader.png" data-src="icons/save.png" draggable="true" ondragstart="dragOn(event)" id="drag-save" class="icon-super" alt="sample icon">
         </div>
         <div class="dnd" ondrop="dragOff(event)" ondragover="dragOver(event)">
         </div>
       </section>
-      <section>
-        <h2>????</h2>
-        <p>Next week: Completing the Javascript framework (stay tuned!)</p><br>
-        <p>Concepts include: primitives, operations, expressions, screen output, keyboard input, control statements, object orientation, arrays. functions, constructors, pattern matching, regular expressions, document object model, element access, events, canvas, dom traversal and modification, navigator... ooh wee!</p>
+      <section id="local-storage">
+        <h2>Local storage</h2>
+        <div class="cutout" id="display-text" style="overflow-y: scroll;"></div>
+        <label for="ls-text-saver">Text editor:</label>
+        <textarea style="height: 200px;" id="ls-text-saver" class="berry"></textarea>
+        <input type="submit" value="Save" onclick="saveText(document.getElementById('ls-text-saver').value)">
+        <p id="ls-text"></p>
+        <script>
+          localStorage.setItem("visited", "true");
+          var savedText = localStorage.getItem("content");
+          if(savedText != null) {
+            document.getElementById("display-text").innerHTML = savedText;
+          } else {
+            localStorage.setItem("content", "No text saved.");
+            savedText = localStorage.getItem("content");
+            document.getElementById("display-text").innerHTML = savedText;
+          }
+          function saveText(txt) {
+            localStorage.setItem("content", txt);
+            var savedText = localStorage.getItem("content");
+            document.getElementById("display-text").innerHTML = savedText;
+          }
+        </script>
       </section>
     </main>
     <!-- Footer -->

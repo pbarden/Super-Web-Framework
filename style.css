@@ -629,6 +629,7 @@ img.hero {
 div.codewrap {
     width: 97%;
     background-color: #2d2930;
+    border: 4px solid #d3d3d3;
 }
 .content-left {
     width: 100%;
