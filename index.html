@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8">
     <title>Paul's final project</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="style.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta property="og:title" content="Paul's final project">
     <meta property="og:description" content="Final project for my last class. Last updated 1/23.">
@@ -1121,23 +1121,7 @@
         <input type="submit" value="Clear" onclick="clearStorage()">
         <p id="ls-text"></p>
         <script>
-          localStorage.setItem("visited", "true");
-          var savedText = localStorage.getItem("content");
-          if(savedText != null) {
-            document.getElementById("display-text").innerHTML = savedText;
-          } else {
-            localStorage.setItem("content", "No text saved.");
-            savedText = localStorage.getItem("content");
-            document.getElementById("display-text").innerHTML = savedText;
-          }
-          function saveText(txt) {
-            localStorage.setItem("content", txt);
-            var savedText = localStorage.getItem("content");
-            document.getElementById("display-text").innerHTML = savedText;
-          }
-          function clearStorage() {
-            localStorage.clear();
-          }
+          localStorage.setItem("visited","true");var savedText=localStorage.getItem("content");function saveText(e){localStorage.setItem("content",e);var t=localStorage.getItem("content");document.getElementById("display-text").innerHTML=t}function clearStorage(){localStorage.clear()}null!=savedText||(localStorage.setItem("content","No text saved."),savedText=localStorage.getItem("content")),document.getElementById("display-text").innerHTML=savedText;
         </script>
       </section>
     </main>
@@ -1153,39 +1137,10 @@
       <div onclick="quackOn(750)" id="quackbox" class="quackbox" style="background-image: url(quack.png);"></div>
     </footer>
     <!-- Functional scripts -->
-    <script src="script.js"></script>
+    <script src="script.min.js"></script>
     <!-- Lazy loading script -->
     <script id="getLazy">
-      // once the document completes, this script will run
-      window.onload = function() {
-        // locates all images stored within document
-        var images = document.getElementsByClassName('lazy');
-        // for each image stored in the array
-        for(var n = 0; n < images.length; n++) {
-          // if the image tag contains a data-src attribute
-          if(images[n].hasAttribute('data-src')) {
-            // swap the data stored in src with data stored in data-src
-            images[n].setAttribute('src', images[n].getAttribute('data-src'));
-            // remove the unecessary data-src attribute
-            images[n].removeAttribute('data-src');
-            // unveil lazy loaded images since images are hidden by default (to prevent broken images when javascript is disabled)
-            images[n].style.visibility = 'visible';
-          }
-        }
-        // locates images with background images by targeting the lazybg class
-        var backgrounds = document.getElementsByClassName('lazybg');
-        // for each background element
-        for(var n = 0;n < backgrounds.length; n++) {
-          // add the data stored in data-bg to the background-image style
-          backgrounds[n].style.backgroundImage = "url(" + backgrounds[n].getAttribute('data-bg') + ")";
-          // remove the unecessary data-bg attribute
-          backgrounds[n].removeAttribute('data-bg');
-        }
-        // removes this script as it is not longer needed on the page since images are all loaded
-        var getLost = document.getElementById('getLazy');
-        quack(1000); // initialize quackers
-        getLost.parentNode.removeChild(getLost);
-      }
+      window.onload=function(){for(var t=document.getElementsByClassName("lazy"),e=0;e<t.length;e++)t[e].hasAttribute("data-src")&&(t[e].setAttribute("src",t[e].getAttribute("data-src")),t[e].removeAttribute("data-src"),t[e].style.visibility="visible");var a=document.getElementsByClassName("lazybg");for(e=0;e<a.length;e++)a[e].style.backgroundImage="url("+a[e].getAttribute("data-bg")+")",a[e].removeAttribute("data-bg");var r=document.getElementById("getLazy");quack(1e3),r.parentNode.removeChild(r)};
     </script>
   </body>
 </html>
